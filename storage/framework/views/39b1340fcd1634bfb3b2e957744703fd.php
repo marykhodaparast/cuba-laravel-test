@@ -26,6 +26,62 @@
                     </li>
                     <li class="sidebar-main-title">
                         <div>
+                            <h6 class="">Wescosa sidebar</h6>
+                        </div>
+                    </li>
+
+                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
+                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.file_manager')); ?>"><svg
+                                class="stroke-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-home')); ?>"></use>
+                            </svg><svg class="fill-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-home')); ?>"></use>
+                            </svg><span>Dashboard</span></a>
+                    </li>
+
+                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
+                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.pricing')); ?>"><svg
+                                class="stroke-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-price')); ?>"></use>
+                            </svg><svg class="fill-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-price')); ?>"></use>
+                            </svg><span>Purchase Orders</span></a></li>
+
+                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
+                            class="sidebar-link sidebar-title link-nav" href="#"><svg class="stroke-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-user')); ?>"></use>
+                            </svg><svg class="fill-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-user')); ?>"></use>
+                            </svg><span>Users</span></a></li>
+                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
+                            class="sidebar-link sidebar-title link-nav" href="#"><svg class="stroke-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-reports')); ?>"></use>
+                            </svg><svg class="fill-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-reports')); ?>"></use>
+                            </svg><span>Reports</span></a></li>
+                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
+                            class="sidebar-link sidebar-title link-nav" href="#"><svg class="stroke-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-task')); ?>"></use>
+                            </svg><svg class="fill-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-task')); ?>"></use>
+                            </svg><span>Analytics</span></a></li>
+                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
+                            class="sidebar-link sidebar-title link-nav" href="#"><svg class="stroke-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-maps')); ?>"></use>
+                            </svg><svg class="fill-icon">
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-maps')); ?>"></use>
+                            </svg><span>Settings</span></a></li>
+                    <li class="sidebar-list mt-5"><a href="<?php echo e(route('logout')); ?>"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
+                                data-feather="log-in"> </i><span>Log out</span></a></li>
+                    <form action="<?php echo e(route('logout')); ?>" method="POST" class="d-none" id="logout-form">
+                        <?php echo csrf_field(); ?>
+                    </form>
+
+
+
+                    <li class="sidebar-main-title">
+                        <div>
                             <h6 class="lan-1">General</h6>
                         </div>
                     </li>
@@ -45,11 +101,13 @@
                             <li><a href="<?php echo e(route('admin.nft_dashboard')); ?>">NFT</a></li>
                             <li> <a href="<?php echo e(route('admin.school_management_dashboard')); ?>">School management</a></li>
                             <li> <a href="<?php echo e(route('admin.pos_dashboard')); ?>">POS</a></li>
-                            <li><label class="badge badge-light-success">New</label><a href="<?php echo e(route('admin.crm_dashboard')); ?>">CRM</a>
+                            <li><label class="badge badge-light-success">New</label><a
+                                    href="<?php echo e(route('admin.crm_dashboard')); ?>">CRM</a>
                             </li>
                             <li><label class="badge badge-light-success">New</label><a
                                     href="<?php echo e(route('admin.analytics_dashboard')); ?>">Analytics</a></li>
-                            <li><label class="badge badge-light-success">New</label><a href="<?php echo e(route('admin.hr_dashboard')); ?>">HR</a>
+                            <li><label class="badge badge-light-success">New</label><a
+                                    href="<?php echo e(route('admin.hr_dashboard')); ?>">HR</a>
                             </li>
                             <li><label class="badge badge-light-success">New</label><a
                                     href="<?php echo e(route('admin.projects_dashboard')); ?>">Projects</a></li>
@@ -57,8 +115,8 @@
                                     href="<?php echo e(route('admin.logistics_dashboard')); ?>">Logistics</a></li>
                         </ul>
                     </li>
-                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a class="sidebar-link sidebar-title"
-                            href="javascript:void(0)"><svg class="stroke-icon">
+                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
+                            class="sidebar-link sidebar-title" href="javascript:void(0)"><svg class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-widget')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-widget')); ?>"></use>
@@ -68,7 +126,7 @@
                                 <li><a href="<?php echo e(route('admin.role.index')); ?>">Role Management</a></li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('user.index')): ?>
-                                <li><a  href="<?php echo e(route('admin.user.index')); ?>">User Management</a></li>
+                                <li><a href="<?php echo e(route('admin.user.index')); ?>">User Management</a></li>
                             <?php endif; ?>
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('blog.index')): ?>
                                 <li><a href="<?php echo e(route('admin.blog.index')); ?>">Blog Management</a></li>
@@ -84,8 +142,8 @@
                             <?php endif; ?>
                         </ul>
                     </li>
-                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a class="sidebar-link sidebar-title"
-                            href="javascript:void(0)"><svg class="stroke-icon">
+                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
+                            class="sidebar-link sidebar-title" href="javascript:void(0)"><svg class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-widget')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-widget')); ?>"></use>
@@ -95,8 +153,8 @@
                             <li><a href="<?php echo e(route('admin.chart_widget')); ?>">Chart</a></li>
                         </ul>
                     </li>
-                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a class="sidebar-link sidebar-title"
-                            href="javascript:void(0)"><svg class="stroke-icon">
+                    <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
+                            class="sidebar-link sidebar-title" href="javascript:void(0)"><svg class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-layout')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-layout')); ?>"></use>
@@ -137,7 +195,8 @@
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-file')); ?>"></use>
                             </svg><span>File manager</span></a></li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"> </i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.kanban')); ?>"><svg class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.kanban')); ?>"><svg
+                                class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-board')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-board')); ?>"></use>
@@ -222,7 +281,8 @@
                         <ul class="sidebar-submenu">
                             <li><a href="<?php echo e(route('admin.user_profile')); ?>">User Profile</a></li>
                             <li><a href="<?php echo e(route('admin.add_user')); ?>">Add User</a></li>
-                            <li><label class="badge badge-light-success">New</label><a href="<?php echo e(route('admin.user_list')); ?>">User
+                            <li><label class="badge badge-light-success">New</label><a
+                                    href="<?php echo e(route('admin.user_list')); ?>">User
                                     List</a></li>
                             <li><a href="<?php echo e(route('admin.user_cards')); ?>">User Cards</a></li>
                             <li><label class="badge badge-light-success">New</label><a
@@ -258,14 +318,15 @@
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-contact')); ?>"> </use>
                             </svg><span>Contacts</span></a></li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.task')); ?>"><svg class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.task')); ?>"><svg
+                                class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-task')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-task')); ?>"> </use>
                             </svg><span>Tasks</span></a></li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.calendar_basic')); ?>"><svg
-                                class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav"
+                            href="<?php echo e(route('admin.calendar_basic')); ?>"><svg class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-calendar')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-calender')); ?>"></use>
@@ -278,7 +339,8 @@
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-social')); ?>"> </use>
                             </svg><span>Social App</span></a></li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.to_do')); ?>"><svg class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.to_do')); ?>"><svg
+                                class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-to-do')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-to-do')); ?>"> </use>
@@ -302,19 +364,20 @@
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-form')); ?>"> </use>
                             </svg><span>Forms</span></a>
                         <ul class="sidebar-submenu">
-                            <li><a class="submenu-title" href="javascript:void(0)">Form Controls<span class="sub-arrow"><i
-                                            class="fa-solid fa-angle-right"></i></span></a>
+                            <li><a class="submenu-title" href="javascript:void(0)">Form Controls<span
+                                        class="sub-arrow"><i class="fa-solid fa-angle-right"></i></span></a>
                                 <ul class="sidebar-submenu">
                                     <li><a href="<?php echo e(route('admin.form_validation')); ?>">Form Validation</a></li>
                                     <li><a href="<?php echo e(route('admin.base_input')); ?>">Base Inputs</a></li>
-                                    <li><a href="<?php echo e(route('admin.radio_checkbox_control')); ?>">Checkbox & Radio</a></li>
+                                    <li><a href="<?php echo e(route('admin.radio_checkbox_control')); ?>">Checkbox & Radio</a>
+                                    </li>
                                     <li><a href="<?php echo e(route('admin.input_group')); ?>">Input Groups</a></li>
                                     <li><a href="<?php echo e(route('admin.input_mask')); ?>">Input Mask</a></li>
                                     <li><a href="<?php echo e(route('admin.megaoptions')); ?>">Mega Options</a></li>
                                 </ul>
                             </li>
-                            <li><a class="submenu-title" href="javascript:void(0)">Form Widgets<span class="sub-arrow"><i
-                                            class="fa-solid fa-angle-right"></i></span></a>
+                            <li><a class="submenu-title" href="javascript:void(0)">Form Widgets<span
+                                        class="sub-arrow"><i class="fa-solid fa-angle-right"></i></span></a>
                                 <ul class="sidebar-submenu">
                                     <li><a href="<?php echo e(route('admin.datepicker')); ?>">Datepicker</a></li>
                                     <li><a href="<?php echo e(route('admin.touchspin')); ?>">Touchspin</a></li>
@@ -324,8 +387,8 @@
                                     <li><a href="<?php echo e(route('admin.clipboard')); ?>">Clipboard</a></li>
                                 </ul>
                             </li>
-                            <li><a class="submenu-title" href="javascript:void(0)">Form layout<span class="sub-arrow"><i
-                                            class="fa-solid fa-angle-right"></i></span></a>
+                            <li><a class="submenu-title" href="javascript:void(0)">Form layout<span
+                                        class="sub-arrow"><i class="fa-solid fa-angle-right"></i></span></a>
                                 <ul class="sidebar-submenu">
                                     <li><a href="<?php echo e(route('admin.form_wizard')); ?>">Form Wizard 1</a></li>
                                     <li><a href="<?php echo e(route('admin.form_wizard_two')); ?>">Form Wizard 2</a></li>
@@ -341,15 +404,15 @@
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-table')); ?>"></use>
                             </svg><span>Tables</span></a>
                         <ul class="sidebar-submenu">
-                            <li><a class="submenu-title" href="javascript:void(0)">Bootstrap Tables<span class="sub-arrow"><i
-                                            class="fa-solid fa-angle-right"></i></span></a>
+                            <li><a class="submenu-title" href="javascript:void(0)">Bootstrap Tables<span
+                                        class="sub-arrow"><i class="fa-solid fa-angle-right"></i></span></a>
                                 <ul class="sidebar-submenu">
                                     <li><a href="<?php echo e(route('admin.bootstrap_basic_table')); ?>">Basic Tables</a></li>
                                     <li><a href="<?php echo e(route('admin.table_components')); ?>">Table components</a></li>
                                 </ul>
                             </li>
-                            <li><a class="submenu-title" href="javascript:void(0)">Data Tables<span class="sub-arrow"><i
-                                            class="fa-solid fa-angle-right"></i></span></a>
+                            <li><a class="submenu-title" href="javascript:void(0)">Data Tables<span
+                                        class="sub-arrow"><i class="fa-solid fa-angle-right"></i></span></a>
                                 <ul class="sidebar-submenu">
                                     <li><a href="<?php echo e(route('admin.datatable_basic_init')); ?>">Basic Init</a></li>
                                     <li> <a href="<?php echo e(route('admin.datatable_advance_init')); ?>">Advance Init </a></li>
@@ -375,7 +438,8 @@
                         <ul class="sidebar-submenu">
                             <li><a href="<?php echo e(route('admin.typography')); ?>">Typography</a></li>
                             <li><a href="<?php echo e(route('admin.avatars')); ?>">Avatars</a></li>
-                            <li><label class="badge badge-light-success">New</label><a href="<?php echo e(route('admin.divider')); ?>">Divider</a>
+                            <li><label class="badge badge-light-success">New</label><a
+                                    href="<?php echo e(route('admin.divider')); ?>">Divider</a>
                             </li>
                             <li><a href="<?php echo e(route('admin.helper_classes')); ?>">helper classes</a></li>
                             <li><a href="<?php echo e(route('admin.grid')); ?>">Grid</a></li>
@@ -405,7 +469,8 @@
                             </svg><span>Bonus Ui</span></a>
                         <ul class="sidebar-submenu">
                             <li><a href="<?php echo e(route('admin.scrollable')); ?>">Scrollable</a></li>
-                            <li><label class="badge badge-light-success">New</label><a href="<?php echo e(route('admin.tree')); ?>">Tree
+                            <li><label class="badge badge-light-success">New</label><a
+                                    href="<?php echo e(route('admin.tree')); ?>">Tree
                                     view</a></li>
                             <li><a href="<?php echo e(route('admin.toasts')); ?>">Toasts</a></li>
                             <li><label class="badge badge-light-success">New</label><a
@@ -422,7 +487,8 @@
                                     href="<?php echo e(route('admin.scroll_spy')); ?>">ScrollSpy</a></li>
                             <li><a href="<?php echo e(route('admin.breadcrumb')); ?>">Breadcrumb</a></li>
                             <li><a href="<?php echo e(route('admin.range_slider')); ?>">Range Slider</a></li>
-                            <li><label class="badge badge-light-success">New</label><a href="<?php echo e(route('admin.ratios')); ?>">Ratios</a>
+                            <li><label class="badge badge-light-success">New</label><a
+                                    href="<?php echo e(route('admin.ratios')); ?>">Ratios</a>
                             </li>
                             <li><a href="<?php echo e(route('admin.image_cropper')); ?>">Image cropper</a></li>
                             <li><a href="<?php echo e(route('admin.basic_card')); ?>">Basic Card</a></li>
@@ -443,7 +509,8 @@
                             <li><a href="<?php echo e(route('admin.aos')); ?>">AOS animation</a></li>
                             <li><a href="<?php echo e(route('admin.tilt')); ?>">Tilt Animation</a></li>
                             <li><a href="<?php echo e(route('admin.wow')); ?>">Wow Animation</a></li>
-                            <li><label class="badge badge-light-success">New</label><a href="<?php echo e(route('admin.flash_icon')); ?>">Flash
+                            <li><label class="badge badge-light-success">New</label><a
+                                    href="<?php echo e(route('admin.flash_icon')); ?>">Flash
                                     Icons</a></li>
                         </ul>
                     </li>
@@ -463,7 +530,8 @@
                         </ul>
                     </li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.buttons')); ?>"><svg class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.buttons')); ?>"><svg
+                                class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-button')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-button')); ?>"></use>
@@ -499,12 +567,13 @@
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-sample-page')); ?>"></use>
                             </svg><span>Sample page</span></a></li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.internationalization')); ?>"><svg
-                                class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav"
+                            href="<?php echo e(route('admin.internationalization')); ?>"><svg class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-internationalization')); ?>">
                                 </use>
                             </svg><svg class="fill-icon">
-                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-internationalization')); ?>"></use>
+                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-internationalization')); ?>">
+                                </use>
                             </svg><span>Internationalization</span></a></li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
                             class="sidebar-link sidebar-title" href="javascript:void(0)"><svg class="stroke-icon">
@@ -526,20 +595,28 @@
                             </svg><span>Authentication</span></a>
                         <ul class="sidebar-submenu">
                             <li><a href="<?php echo e(route('login')); ?>" target="_blank">Login Simple</a></li>
-                            <li><a href="<?php echo e(route('admin.login_one')); ?>" target="_blank">Login with bg image</a></li>
-                            <li><a href="<?php echo e(route('admin.login_two')); ?>" target="_blank">Login with image two </a></li>
-                            <li><a href="<?php echo e(route('admin.login_three')); ?>" target="_blank">Login With Image Three</a></li>
-                            <li><a href="<?php echo e(route('admin.login_with_tooltip')); ?>" target="_blank">Login with tooltip</a>
+                            <li><a href="<?php echo e(route('admin.login_one')); ?>" target="_blank">Login with bg image</a>
+                            </li>
+                            <li><a href="<?php echo e(route('admin.login_two')); ?>" target="_blank">Login with image two </a>
+                            </li>
+                            <li><a href="<?php echo e(route('admin.login_three')); ?>" target="_blank">Login With Image
+                                    Three</a></li>
+                            <li><a href="<?php echo e(route('admin.login_with_tooltip')); ?>" target="_blank">Login with
+                                    tooltip</a>
                             </li>
                             <li><a href="<?php echo e(route('admin.login_with_sweetalert')); ?>" target="_blank">Login with
                                     sweetalert</a></li>
                             <li><a href="<?php echo e(route('admin.sign_up')); ?>" target="_blank">Register Simple</a></li>
-                            <li><a href="<?php echo e(route('admin.sign_up_with_bg_image')); ?>" target="_blank">Register with Bg Image
+                            <li><a href="<?php echo e(route('admin.sign_up_with_bg_image')); ?>" target="_blank">Register with
+                                    Bg Image
                                 </a></li>
-                            <li><a href="<?php echo e(route('admin.sign_up_with_image_two')); ?>" target="_blank">Register with image
+                            <li><a href="<?php echo e(route('admin.sign_up_with_image_two')); ?>" target="_blank">Register with
+                                    image
                                     two</a></li>
-                            <li><a href="<?php echo e(route('admin.sign_up_wizard')); ?>" target="_blank">Register wizard</a></li>
-                            <li><a href="<?php echo e(route('admin.account_restricted')); ?>" target="_blank">Account Restricted</a>
+                            <li><a href="<?php echo e(route('admin.sign_up_wizard')); ?>" target="_blank">Register wizard</a>
+                            </li>
+                            <li><a href="<?php echo e(route('admin.account_restricted')); ?>" target="_blank">Account
+                                    Restricted</a>
                             </li>
                             <li><a href="<?php echo e(route('admin.unlock')); ?>">Unlock User</a></li>
                             <li><a href="<?php echo e(route('admin.forget_password')); ?>">Forgot Password</a></li>
@@ -589,20 +666,22 @@
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-sitemap')); ?>"></use>
                             </svg><span>Site Map</span></a></li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.pricing')); ?>"><svg class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.pricing')); ?>"><svg
+                                class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-price')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-price')); ?>"></use>
                             </svg><span>Pricing </span></a></li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.faq')); ?>"><svg class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.faq')); ?>"><svg
+                                class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-faq')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-faq')); ?>"></use>
                             </svg><span>FAQ</span></a></li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.subscribed_user')); ?>"><svg
-                                class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav"
+                            href="<?php echo e(route('admin.subscribed_user')); ?>"><svg class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-subscribe')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-subscribe')); ?>"></use>
@@ -625,7 +704,9 @@
                             <li><a href="<?php echo e(route('admin.masonry_gallery_with_disc')); ?>">Masonry with Desc</a></li>
                             <li><a href="<?php echo e(route('admin.gallery_hover')); ?>">Hover Effects</a></li>
                             <li>
-                            <label class="badge badge-light-success">New</label><a href="<?php echo e(route('admin.gallery_placeholder')); ?>">Gallery Placeholder</a></li>
+                                <label class="badge badge-light-success">New</label><a
+                                    href="<?php echo e(route('admin.gallery_placeholder')); ?>">Gallery Placeholder</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
@@ -690,15 +771,15 @@
                         </ul>
                     </li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.knowledgebase')); ?>"><svg
-                                class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav"
+                            href="<?php echo e(route('admin.knowledgebase')); ?>"><svg class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-knowledgebase')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-knowledgebase')); ?>"></use>
                             </svg><span>Knowledgebase</span></a></li>
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.support_ticket')); ?>"><svg
-                                class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav"
+                            href="<?php echo e(route('admin.support_ticket')); ?>"><svg class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-support-tickets')); ?>"></use>
                             </svg><svg class="fill-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-support-tickets')); ?>"></use>
