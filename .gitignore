@@ -1,0 +1,46 @@
+# Laravel core
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+.env
+.env.*
+.phpunit.result.cache
+Homestead.yaml
+Homestead.json
+/.vagrant
+
+# Laravel build artifacts
+/public/hot
+/public/mix-manifest.json
+/public/build
+/public/assets/scss/*.css
+/public/assets/scss/*.map
+
+# Vite / Mix
+/.vite
+/vite.config.js
+/vite.config.ts
+
+# IDEs and OS
+.idea
+*.sublime-project
+*.sublime-workspace
+*.vscode
+.DS_Store
+Thumbs.db
+
+# Composer & NPM
+composer.lock
+package-lock.json
+yarn.lock
+npm-debug.log
+yarn-error.log
+
+# Test artifacts
+coverage/
+.phpunit.cache
+
+# Misc
+*.log
+*.sqlite
