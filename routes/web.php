@@ -67,6 +67,7 @@ Route::view('logistics-dashboard', 'dashboards.logistics_dashboard')->name('logi
 
 //WESCOSA Dashboard
 Route::view('wescosa-dashboard', 'wescosa.dashboard')->name('wescosa_dashboard');
+Route::view('wescosa-purchase-orders', 'wescosa.purchase_orders')->name('wescosa_purchase_orders');
 
 //widgets
 Route::view('general-widget', 'widgets.general_widget')->name('general_widget');

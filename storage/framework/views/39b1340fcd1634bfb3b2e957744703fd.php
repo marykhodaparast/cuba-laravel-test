@@ -40,7 +40,7 @@
                     </li>
 
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.pricing')); ?>"><svg
+                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.wescosa_purchase_orders')); ?>"><svg
                                 class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-price')); ?>"></use>
                             </svg><svg class="fill-icon">
@@ -76,8 +76,6 @@
                     <form action="<?php echo e(route('logout')); ?>" method="POST" class="d-none" id="logout-form">
                         <?php echo csrf_field(); ?>
                     </form>
-
-
 
                     <li class="sidebar-main-title">
                         <div>

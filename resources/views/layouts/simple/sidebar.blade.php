@@ -40,7 +40,7 @@
                     </li>
 
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="{{ route('admin.pricing') }}"><svg
+                            class="sidebar-link sidebar-title link-nav" href="{{ route('admin.wescosa_purchase_orders') }}"><svg
                                 class="stroke-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-price') }}"></use>
                             </svg><svg class="fill-icon">
@@ -76,8 +76,6 @@
                     <form action="{{ route('logout') }}" method="POST" class="d-none" id="logout-form">
                         @csrf
                     </form>
-
-
 
                     <li class="sidebar-main-title">
                         <div>
