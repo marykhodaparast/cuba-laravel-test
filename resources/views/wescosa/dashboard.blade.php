@@ -17,7 +17,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg
+                                    class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Dashboard</li>
@@ -29,44 +30,78 @@
     </div><!-- Container-fluid starts-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 col-xs-12 col-sm-6">
+            <div class="col-md-4 col-xs-12 col-sm-12">
                 <div class="card text-center">
                     <div class="card-body">
-                      <h5 class="card-title">Total Users</h5>
-                      <p class="card-text">1,234</p>
+                        <h5 class="card-title">Total Users</h5>
+                        <p class="card-text">1,234</p>
                     </div>
-                  </div>
-
+                </div>
             </div>
 
-            <div class="col-md-4 col-xs-12 col-sm-6">
+            <div class="col-md-4 col-xs-12 col-sm-12">
                 <div class="card text-center">
                     <div class="card-body">
-                      <h5 class="card-title">Active Sessions</h5>
-                      <p class="card-text">56</p>
+                        <h5 class="card-title">Active Sessions</h5>
+                        <p class="card-text">56</p>
                     </div>
-                  </div>
-
+                </div>
             </div>
 
-            <div class="col-md-4 col-xs-12 col-sm-6">
+            <div class="col-md-4 col-xs-12 col-sm-12">
                 <div class="card text-center">
                     <div class="card-body">
-                      <h5 class="card-title">New Reports</h5>
-                      <p class="card-text">12</p>
+                        <h5 class="card-title">New Reports</h5>
+                        <p class="card-text">12</p>
                     </div>
-                  </div>
-
+                </div>
             </div>
 
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-xs-12 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>New Users</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="column-chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12 col-sm-12">
+                <div class="card widget-1">
+                    <div class="card-body">
+                        <div class="widget-content">
+                            <div class="widget-round primary">
+                                <div class="bg-round"><svg class="fill-primary">
+                                        <use href="{{ asset('assets/svg/icon-sprite.svg#c-invoice') }}">
+                                        </use>
+                                    </svg><svg class="half-circle svg-fill">
+                                        <use href="{{ asset('assets/svg/icon-sprite.svg#halfcircle') }}">
+                                        </use>
+                                    </svg></div>
+                            </div>
+                            <div>
+                                <h4> <span class="counter" data-target="75">0</span>%</h4><span class="f-light">Expected Progress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div><!-- Container-fluid Ends-->
 @endsection
 
 @section('scripts')
     <script src="{{ asset('assets/js/clock.js') }}"></script>
+    {{-- Apex Chart --}}
     <script src="{{ asset('assets/js/chart/apex-chart/apex-chart.js') }}"></script>
     <script src="{{ asset('assets/js/chart/apex-chart/stock-prices.js') }}"></script>
+    <script src="{{ asset('assets/js/chart/apex-chart/moment.min.js') }}"></script>
+    <script src="{{ asset('assets/js/chart/apex-chart/chart-custom-wescosa.js') }}"></script>
+    {{-- End Apex Chart --}}
     <script src="{{ asset('assets/js/counter/counter-custom.js') }}"></script>
     <script src="{{ asset('assets/js/notify/bootstrap-notify.min.js') }}"></script>
     <script src="{{ asset('assets/js/dashboard/default.js') }}"></script>
