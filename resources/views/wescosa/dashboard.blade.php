@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/animate.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/jquery.dataTables.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/select.bootstrap5.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/animate.css') }}">
 @endsection
 
 @section('main_content')
@@ -94,7 +95,7 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="col-12">
                 <div class="card">
                     <div class="card-header">
                         <h3>Chat - Production Team</h3>
@@ -686,7 +687,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="col-12">
                 <div class="card">
                     <div class="card-header">
                         <h5>Production Growth </h5>
@@ -726,4 +727,7 @@
     <script src="{{ asset('assets/js/common-chat.js') }}"></script>
     <script src="{{ asset('assets/js/emoji-js/custom-emoji.js') }}"></script>
     <script src="{{ asset('assets/js/emoji-js/custom-emojis.js') }}"></script>
+
+    <script src="{{ asset('assets/js/icons/icons-notify.js') }}"></script>
+    <script src="{{ asset('assets/js/icons/feather-icon/feather-icon-clipart.js') }}"></script>
 @endsection

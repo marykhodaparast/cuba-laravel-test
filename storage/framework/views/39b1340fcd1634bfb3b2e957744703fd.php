@@ -72,8 +72,7 @@
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#fill-maps')); ?>"></use>
                             </svg><span>Settings</span></a></li>
                     <li class="sidebar-list mt-5"><a href="<?php echo e(route('logout')); ?>"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
-                                data-feather="log-in"> </i><span>Log out</span></a></li>
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i data-feather="log-in"></i><span>Log out</span></a></li>
                     <form action="<?php echo e(route('logout')); ?>" method="POST" class="d-none" id="logout-form">
                         <?php echo csrf_field(); ?>
                     </form>

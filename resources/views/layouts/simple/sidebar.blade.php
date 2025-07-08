@@ -72,8 +72,7 @@
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#fill-maps') }}"></use>
                             </svg><span>Settings</span></a></li>
                     <li class="sidebar-list mt-5"><a href="{{ route('logout') }}"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
-                                data-feather="log-in"> </i><span>Log out</span></a></li>
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i data-feather="log-in"></i><span>Log out</span></a></li>
                     <form action="{{ route('logout') }}" method="POST" class="d-none" id="logout-form">
                         @csrf
                     </form>
