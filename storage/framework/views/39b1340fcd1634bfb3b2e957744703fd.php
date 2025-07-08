@@ -31,7 +31,7 @@
                     </li>
 
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.file_manager')); ?>"><svg
+                            class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('admin.wescosa_dashboard')); ?>"><svg
                                 class="stroke-icon">
                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-home')); ?>"></use>
                             </svg><svg class="fill-icon">

@@ -65,6 +65,9 @@ Route::view('hr-dashboard', 'dashboards.hr_dashboard')->name('hr_dashboard');
 Route::view('projects-dashboard', 'dashboards.projects_dashboard')->name('projects_dashboard');
 Route::view('logistics-dashboard', 'dashboards.logistics_dashboard')->name('logistics_dashboard');
 
+//WESCOSA Dashboard
+Route::view('wescosa-dashboard', 'wescosa.dashboard')->name('wescosa_dashboard');
+
 //widgets
 Route::view('general-widget', 'widgets.general_widget')->name('general_widget');
 Route::view('chart-widget', 'widgets.chart_widget')->name('chart_widget');
