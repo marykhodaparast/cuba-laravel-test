@@ -247,6 +247,21 @@
         .form-contrl {
             font-size: 0.7rem !important;
         }
+
+        #child-name,
+        #child_date {
+            color: #000 !important;
+        }
+
+        .black-color {
+            color: #000 !important;
+        }
+
+        body.dark-only .form-control {
+            color:#fff !important;
+            background-color: #262932;
+            border-color: #374558;
+        }
     </style>
 @endsection
 
@@ -541,23 +556,23 @@
 
         <div class="row">
             <div class="col-md-3">
-                <span style="font-size: 10px;">QUANTITY</span><br>
-                <span id="child-qty" style="font-size: 10px;font-weight: 700;"></span>
+                <span style="font-size: 10px;" class="black-color">QUANTITY</span><br>
+                <span id="child-qty" style="font-size: 10px;font-weight: 700;" class="black-color"></span>
             </div>
             <div class="col-md-4">
-                <span style="font-size: 10px;">UNIT PRICE</span><br>
-                <span id="child-unit-price" style="font-size: 10px;font-weight: 700;"></span>
+                <span style="font-size: 10px;" class="black-color">UNIT PRICE</span><br>
+                <span id="child-unit-price" style="font-size: 10px;font-weight: 700;" class="black-color"></span>
             </div>
             <div class="col-md-4">
-                <span style="font-size: 10px;">TOTAL PRICE</span><br>
-                <span id="child-total-price" style="font-size: 10px;font-weight: 700;"></span>
+                <span style="font-size: 10px;" class="black-color">TOTAL PRICE</span><br>
+                <span id="child-total-price" style="font-size: 10px;font-weight: 700;" class="black-color"></span>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-6">
-                <span style="font-size: 10px;">ORDERED DATE</span><br>
-                <span id="child-date" style="font-size: 10px;font-weight: 700;"></span>
+                <span style="font-size: 10px;" class="black-color">ORDERED DATE</span><br>
+                <span id="child-date" style="font-size: 10px;font-weight: 700;" class="black-color"></span>
             </div>
         </div>
 
@@ -568,23 +583,23 @@
             <input type="hidden" class="form-control" name="item_id" id="child-item-id">
 
             <div class="form-group mb-2">
-                <label style="font-size: 12px;">ETA</label>
+                <label style="font-size: 12px;color:#000 !important">ETA</label>
                 <input type="date" class="form-control" id="eta" name="eta" style="font-size: 0.7rem;">
             </div>
 
             <div class="form-group mb-2">
-                <label style="font-size: 12px;">ATA</label>
+                <label style="font-size: 12px;color:#000 !important">ATA</label>
                 <input type="date" class="form-control" id="ata" name="ata" style="font-size: 0.7rem;">
             </div>
 
             <div class="form-group mb-2">
-                <label style="font-size: 12px;">Inspection Remarks</label>
+                <label style="font-size: 12px;color:#000 !important">Inspection Remarks</label>
                 <input type="text" class="form-control" id="inspection" name="inspection"
                     style="font-size: 0.7rem;">
             </div>
 
             <div class="form-group mb-3">
-                <label style="font-size: 12px;">Production Manager Remarks</label>
+                <label style="font-size: 12px;color:#000 !important">Production Manager Remarks</label>
                 <input type="text" class="form-control" id="pm-remarks" name="pm_remarks"
                     style="font-size: 0.7rem;">
             </div>
