@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Ui Kits</li>
@@ -394,7 +394,7 @@
  &lt;/div&gt;
  &lt;div class="offcanvas-body custom-input custom-scrollbar"&gt;
    &lt;form class="row g-3"&gt;
-     &lt;div class="col-12"&gt; 
+     &lt;div class="col-12"&gt;
        &lt;label class="form-label" for="exampleFormControlInput1"&gt;Email&lt;/label&gt;
        &lt;input class="form-control" id="exampleFormControlInput1" type="email" placeholder="name@example.com"&gt;
      &lt;/div&gt;
@@ -416,7 +416,7 @@
          &lt;option value="3"&gt;Three&lt;/option&gt;
        &lt;/select&gt;
      &lt;/div&gt;
-     &lt;div class="col-12"&gt; 
+     &lt;div class="col-12"&gt;
        &lt;label class="form-label" for="exampleFormControlTextarea1"&gt;External Notes&lt;/label&gt;
        &lt;textarea class="form-control" id="exampleFormControlTextarea1" rows="4"&gt;&lt;/textarea&gt;
      &lt;/div&gt;
@@ -492,7 +492,7 @@
  &lt;/div&gt;
  &lt;div class="offcanvas-body custom-input custom-scrollbar"&gt;
    &lt;form class="row g-3"&gt;
-     &lt;div class="col-12"&gt; 
+     &lt;div class="col-12"&gt;
        &lt;label class="form-label" for="exampleFormControlEmail"&gt;Email&lt;/label&gt;
        &lt;input class="form-control" id="exampleFormControlEmail" type="email" placeholder="name@example.com"&gt;
      &lt;/div&gt;
@@ -514,7 +514,7 @@
          &lt;option value="3"&gt;Three&lt;/option&gt;
        &lt;/select&gt;
      &lt;/div&gt;
-     &lt;div class="col-12"&gt; 
+     &lt;div class="col-12"&gt;
        &lt;label class="form-label" for="exampleFormControlTextarea2"&gt;External Notes&lt;/label&gt;
        &lt;textarea class="form-control" id="exampleFormControlTextarea2" rows="4"&gt;&lt;/textarea&gt;
      &lt;/div&gt;
@@ -722,7 +722,7 @@
    &lt;h6&gt;Wed Designer&lt;/h6&gt;
    &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
    &lt;form class="row g-3"&gt;
-     &lt;div class="col-12"&gt; 
+     &lt;div class="col-12"&gt;
        &lt;label class="form-label" for="exampleFormControlInput2"&gt;Email&lt;/label&gt;
        &lt;input class="form-control" id="exampleFormControlInput2" type="email" placeholder="name@example.com"&gt;
      &lt;/div&gt;
@@ -744,7 +744,7 @@
          &lt;option value="3"&gt;Three&lt;/option&gt;
        &lt;/select&gt;
      &lt;/div&gt;
-     &lt;div class="col-12"&gt; 
+     &lt;div class="col-12"&gt;
        &lt;label class="form-label" for="exampleFormControlTextarea3"&gt;External Notes&lt;/label&gt;
        &lt;textarea class="form-control" id="exampleFormControlTextarea3" rows="4"&gt;&lt;/textarea&gt;
      &lt;/div&gt;
@@ -771,7 +771,7 @@
    &lt;h6&gt;Wed Designer&lt;/h6&gt;
    &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
    &lt;form class="row g-3"&gt;
-     &lt;div class="col-12"&gt; 
+     &lt;div class="col-12"&gt;
        &lt;label class="form-label" for="exampleFormControlInput3"&gt;Email&lt;/label&gt;
        &lt;input class="form-control" id="exampleFormControlInput3" type="email" placeholder="name@example.com"&gt;
      &lt;/div&gt;
@@ -793,7 +793,7 @@
          &lt;option value="3"&gt;Three&lt;/option&gt;
        &lt;/select&gt;
      &lt;/div&gt;
-     &lt;div class="col-12"&gt; 
+     &lt;div class="col-12"&gt;
        &lt;label class="form-label" for="externalNotes"&gt;External Notes&lt;/label&gt;
        &lt;textarea class="form-control" id="externalNotes" rows="4"&gt;&lt;/textarea&gt;
      &lt;/div&gt;
@@ -820,7 +820,7 @@
    &lt;h6&gt;Wed Designer&lt;/h6&gt;
    &lt;p&gt;For a site to be successful, a designer must be able to communicate their ideas, chat with a firm about what they want, and inquire about the target audience.&lt;/p&gt;
    &lt;form class="row g-3"&gt;
-     &lt;div class="col-12"&gt; 
+     &lt;div class="col-12"&gt;
        &lt;label class="form-label" for="exampleFormControlInput4"&gt;Email&lt;/label&gt;
        &lt;input class="form-control" id="exampleFormControlInput4" type="email" placeholder="name@example.com"&gt;
      &lt;/div&gt;
@@ -842,7 +842,7 @@
          &lt;option value="3"&gt;Three&lt;/option&gt;
        &lt;/select&gt;
      &lt;/div&gt;
-     &lt;div class="col-12"&gt; 
+     &lt;div class="col-12"&gt;
        &lt;label class="form-label" for="exampleFormControlTextarea4"&gt;External Notes&lt;/label&gt;
        &lt;textarea class="form-control" id="exampleFormControlTextarea4" rows="4"&gt;&lt;/textarea&gt;
      &lt;/div&gt;

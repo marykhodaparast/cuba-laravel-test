@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Ui Kits</li>
@@ -305,7 +305,7 @@
  &lt;div class="col-sm-6 col-xxl-3"&gt;
    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
      &lt;h6 class="sub-title fw-bold"&gt;Link Opacity&lt;/h6&gt;
-     &lt;div class="link-opacity-wrapper"&gt; 
+     &lt;div class="link-opacity-wrapper"&gt;
        &lt;p&gt;&lt;a class="link-opacity-10" href="#!"&gt;Link opacity 10&lt;/a&gt;&lt;/p&gt;
        &lt;p&gt;&lt;a class="link-opacity-25" href="#!"&gt;Link opacity 25&lt;/a&gt;&lt;/p&gt;
        &lt;p&gt;&lt;a class="link-opacity-50" href="#!"&gt;Link opacity 50&lt;/a&gt;&lt;/p&gt;
@@ -317,7 +317,7 @@
  &lt;div class="col-sm-6 col-xxl-3"&gt;
    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
      &lt;h6 class="sub-title fw-bold"&gt; Hovered Link Opacity&lt;/h6&gt;
-     &lt;div class="link-opacity-wrapper"&gt; 
+     &lt;div class="link-opacity-wrapper"&gt;
        &lt;p&gt;&lt;a class="link-opacity-10-hover" href="#!"&gt;Link hover opacity 10&lt;/a&gt;&lt;/p&gt;
        &lt;p&gt;&lt;a class="link-opacity-25-hover" href="#!"&gt;Link hover opacity 25&lt;/a&gt;&lt;/p&gt;
        &lt;p&gt;&lt;a class="link-opacity-50-hover" href="#!"&gt;Link hover opacity 50&lt;/a&gt;&lt;/p&gt;

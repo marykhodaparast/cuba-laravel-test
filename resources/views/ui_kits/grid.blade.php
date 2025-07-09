@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item"> Ui Kits</li>
@@ -410,7 +410,7 @@
  &lt;div class="col-sm-6 col-md-8"&gt;
    &lt;div class="p-3"&gt;&lt;span&gt;col-sm-6 & col-md-8&lt;/span&gt;&lt;/div&gt;
  &lt;/div&gt;
- &lt;div class="col-6 col-md-4"&gt; 
+ &lt;div class="col-6 col-md-4"&gt;
    &lt;div class="p-3"&gt;&lt;span class="col-6"&gt;col-md-4&lt;/span&gt;&lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</code></pre>

@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Ui Kits</li>
@@ -82,7 +82,7 @@
                         <div class="code-box-copy"><button class="code-box-copy__btn btn-clipboard"
                                 data-clipboard-target="#basic-dropdown" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
-                            <pre class="custom-scrollbar"><code class="language-html" id="basic-dropdown">&lt;div class="common-flex"&gt; 
+                            <pre class="custom-scrollbar"><code class="language-html" id="basic-dropdown">&lt;div class="common-flex"&gt;
  &lt;div class="btn-group"&gt;
    &lt;button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Dashboard&lt;/button&gt;
    &lt;ul class="dropdown-menu dropdown-block"&gt;
@@ -475,7 +475,7 @@
  &lt;btn-group&gt;
    &lt;button class="btn btn-warning" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Inputs&lt;/button&gt;
    &lt;ul class="dropdown-menu dropdown-block dropdown-wrapper dark-input-type"&gt;
-     &lt;li&gt; 
+     &lt;li&gt;
        &lt;div class="input-group rounded-0 border-0 shadow-none"&gt;
          &lt;div class="input-group-text"&gt;
            &lt;input class="form-check-input mt-0 checkbox-primary" type="checkbox" value="" aria-label="Checkbox for following text input"&gt;

@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Ui Kits</li>
@@ -494,7 +494,7 @@
    &lt;/h2&gt;
    &lt;div class="accordion-collapse collapse" id="panelsStayOpen-collapseThree" aria-labelledby="panelsStayOpen-headingThree"&gt;
      &lt;div class="accordion-body"&gt;
-       &lt;ul class="d-flex flex-column gap-2 accordions-content"&gt; 
+       &lt;ul class="d-flex flex-column gap-2 accordions-content"&gt;
          &lt;li&gt;1) Decide on the indentation and keep it that way.&lt;/li&gt;
          &lt;li&gt;2) Make comments.&lt;/li&gt;
          &lt;li&gt;3) Consistent name scheme.&lt;/li&gt;
@@ -716,7 +716,7 @@
                             <pre class="custom-scrollbar"><code class="language-html" id="horizontal-according">&lt;div class="common-flex"&gt;
  &lt;button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"&gt;Toggle Width Collapse&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class="row"&gt; 
+&lt;div class="row"&gt;
  &lt;div class="col-xxl-8 col-xl-12"&gt;
    &lt;div class="collapse collapse-horizontal mt-3" id="collapseWidthExample"&gt;
      &lt;div class="card card-body accordion-h-space mb-0"&gt;This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.&lt;/div&gt;

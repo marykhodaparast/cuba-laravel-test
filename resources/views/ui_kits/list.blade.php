@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Ui Kits</li>
@@ -202,7 +202,7 @@
                         <div class="code-box-copy"><button class="code-box-copy__btn btn-clipboard"
                                 data-clipboard-target="#contextual-list" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
-                            <pre class="custom-scrollbar"><code class="language-html" id="contextual-list">&lt;div class="card-body contextual-wrapper"&gt; 
+                            <pre class="custom-scrollbar"><code class="language-html" id="contextual-list">&lt;div class="card-body contextual-wrapper"&gt;
  &lt;div class="list-group"&gt;
    &lt;a class="list-group-item list-group-item-action list-light-primary" href="#!"&gt;This is primary bg you can use
      &lt;em class="txt-primary fw-bold"&gt;.list-light-primary&lt;/em&gt;class.
@@ -412,7 +412,7 @@
    &lt;div class="d-flex w-100 justify-content-between align-items-center"&gt;
      &lt;div class="list-wrapper"&gt;
        &lt;img class="list-img me-0" src="{{ asset('assets/images/user/1.jpg') }}" alt="profile"&gt;
-       &lt;div class="list-content"&gt; 
+       &lt;div class="list-content"&gt;
          &lt;h6&gt;Molly Blake&lt;/h6&gt;
          &lt;p&gt;MollyBoake@rhyta.com&lt;/p&gt;
        &lt;/div&gt;
@@ -426,7 +426,7 @@
    &lt;div class="d-flex w-100 justify-content-between align-items-center"&gt;
      &lt;div class="list-wrapper"&gt;
        &lt;img class="list-img me-0" src="{{ asset('assets/images/user/3.png') }}" alt="profile"&gt;
-       &lt;div class="list-content"&gt; 
+       &lt;div class="list-content"&gt;
          &lt;h6&gt;Gabrielle Fahey&lt;/h6&gt;
          &lt;p&gt;GabrielleFahey@dayrep.com&lt;/p&gt;
        &lt;/div&gt;
@@ -440,7 +440,7 @@
    &lt;div class="d-flex w-100 justify-content-between align-items-center"&gt;
      &lt;div class="list-wrapper"&gt;
        &lt;img class="list-img me-0" src="{{ asset('assets/images/user/2.jpg') }}" alt="profile"&gt;
-       &lt;div class="list-content"&gt; 
+       &lt;div class="list-content"&gt;
          &lt;h6&gt;Lucinda Moseley&lt;/h6&gt;
          &lt;p&gt;LucindaMoseley@teleworm.us&lt;/p&gt;
        &lt;/div&gt;
@@ -740,7 +740,7 @@
          &lt;div class="flex-shrink-0"&gt;
            &lt;img class="tab-img img-fluid" src="{{ asset('assets/images/blog/blog.jpg') }}" alt="home"&gt;
          &lt;/div&gt;
-         &lt;div class="flex-grow-1"&gt; 
+         &lt;div class="flex-grow-1"&gt;
            &lt;p class="mb-0"&gt;When someone visits your homepage, your design should inspire them to stay. Therefore, your value proposition should be established on the homepage for visitors to select to stay on your website.Building trust, expressing value, and guiding visitors to the next step all depend on a page's design.&lt;/p&gt;
          &lt;/div&gt;
        &lt;/div&gt;
@@ -768,7 +768,7 @@
          &lt;li&gt;&lt;strong&gt;Available Pages in Theme:&lt;/strong&gt;&lt;/li&gt;
          &lt;li&gt;--&gt; Typography: Typography is the art of arranging letters and text in a way that makes the copy legible, clear, and visually appealing to the reader.
          &lt;/li&gt;
-         &lt;li&gt;--&gt; Tooltip: A tooltip is a brief, informative message that appears when a user interacts with an element in a graphical user interface (GUI). 
+         &lt;li&gt;--&gt; Tooltip: A tooltip is a brief, informative message that appears when a user interacts with an element in a graphical user interface (GUI).
          &lt;/li&gt;
        &lt;/ul&gt;
      &lt;/div&gt;
@@ -992,7 +992,7 @@
  &lt;a class="list-group-item list-group-item-action active list-hover-primary" href="#" aria-current="true"&gt;
    &lt;div class="list-wrapper gap-0"&gt;
      &lt;img class="list-img" src="{{ asset('assets/images/dashboard-11/user/12.jpg') }}" alt="profile"&gt;
-     &lt;div class="list-content"&gt; 
+     &lt;div class="list-content"&gt;
        &lt;h6&gt;Molly Boake&lt;/h6&gt;
        &lt;p class="f-light"&gt;MollyBoake@rhyta.com&lt;/p&gt;&lt;small&gt;f-light&lt;/small&gt;
      &lt;/div&gt;
@@ -1001,7 +1001,7 @@
  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
    &lt;div class="list-wrapper gap-0"&gt;
      &lt;img class="list-img" src="{{ asset('assets/images/dashboard-11/user/11.jpg') }}" alt="profile"&gt;
-     &lt;div class="list-content"&gt; 
+     &lt;div class="list-content"&gt;
        &lt;h6&gt;Gabrielle Fahey&lt;/h6&gt;
        &lt;p class="f-light"&gt;GabrielleFahey@dayrep.com&lt;/p&gt;&lt;small class="f-light"&gt;10 days ago&lt;/small&gt;
      &lt;/div&gt;
@@ -1010,7 +1010,7 @@
  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
    &lt;div class="list-wrapper gap-0"&gt;
      &lt;img class="list-img" src="{{ asset('assets/images/dashboard-11/user/10.jpg') }}" alt="profile"&gt;
-     &lt;div class="list-content"&gt; 
+     &lt;div class="list-content"&gt;
        &lt;h6&gt;Lucinda Moseley&lt;/h6&gt;
        &lt;p class="f-light"&gt;LucindaMoseley@teleworm.us&lt;/p&gt;&lt;small class="f-light"&gt;3 days ago&lt;/small&gt;
      &lt;/div&gt;
@@ -1019,7 +1019,7 @@
  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
    &lt;div class="list-wrapper gap-0"&gt;
      &lt;img class="list-img" src="{{ asset('assets/images/dashboard-11/user/9.jpg') }}" alt="profile"&gt;
-     &lt;div class="list-content"&gt; 
+     &lt;div class="list-content"&gt;
        &lt;h6&gt;Francis K. Henriques&lt;/h6&gt;
        &lt;p class="f-light"&gt;FrancisKHenriques@teleworm.us&lt;/p&gt;&lt;small class="f-light"&gt;2 days ago&lt;/small&gt;
      &lt;/div&gt;
@@ -1028,7 +1028,7 @@
  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
    &lt;div class="list-wrapper gap-0"&gt;
      &lt;img class="list-img" src="{{ asset('assets/images/dashboard-11/user/8.jpg') }}" alt="profile"&gt;
-     &lt;div class="list-content"&gt; 
+     &lt;div class="list-content"&gt;
        &lt;h6&gt;Jose A. Seay&lt;/h6&gt;
        &lt;p class="f-light"&gt;JoseASeay@rhyta.com&lt;/p&gt;&lt;small class="f-light"&gt;15 days ago&lt;/small&gt;
      &lt;/div&gt;
@@ -1037,7 +1037,7 @@
  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
    &lt;div class="list-wrapper gap-0"&gt;
      &lt;img class="list-img" src="{{ asset('assets/images/dashboard-11/user/4.jpg') }}" alt="profile"&gt;
-     &lt;div class="list-content"&gt; 
+     &lt;div class="list-content"&gt;
        &lt;h6&gt;Phil F. Cunningham&lt;/h6&gt;
        &lt;p class="f-light"&gt;PhilFCunningham@dayrep.com&lt;/p&gt;&lt;small class="f-light"&gt;6 days ago&lt;/small&gt;
      &lt;/div&gt;
@@ -1046,7 +1046,7 @@
  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
    &lt;div class="list-wrapper gap-0"&gt;
      &lt;img class="list-img" src="{{ asset('assets/images/dashboard-9/user/5.png') }}" alt="profile"&gt;
-     &lt;div class="list-content"&gt; 
+     &lt;div class="list-content"&gt;
        &lt;h6&gt;Richard E. Johnson&lt;/h6&gt;
        &lt;p class="f-light"&gt;RichardEJohnson@teleworm.us&lt;/p&gt;&lt;small class="f-light"&gt;20 days ago&lt;/small&gt;
      &lt;/div&gt;
@@ -1055,7 +1055,7 @@
  &lt;a class="list-group-item list-group-item-action list-hover-primary" href="#!"&gt;
    &lt;div class="list-wrapper gap-0"&gt;
      &lt;img class="list-img" src="{{ asset('assets/images/dashboard-9/user/1.png') }}" alt="profile"&gt;
-     &lt;div class="list-content"&gt; 
+     &lt;div class="list-content"&gt;
        &lt;h6&gt;Lawrence L. Nash&lt;/h6&gt;
        &lt;p class="f-light"&gt;LawrenceLNash@jourrapide.com&lt;/p&gt;&lt;small class="f-light"&gt;8 days ago&lt;/small&gt;
      &lt;/div&gt;

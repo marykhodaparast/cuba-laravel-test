@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Ui KIts</li>
@@ -267,7 +267,7 @@
  &lt;div class="modal-dialog" role="document"&gt;
    &lt;div class="modal-content"&gt;
      &lt;div class="modal-body"&gt;
-       &lt;div class="modal-toggle-wrapper"&gt; 
+       &lt;div class="modal-toggle-wrapper"&gt;
          &lt;h4&gt;Up to&lt;strong class="txt-danger"&gt;85% OFF&lt;/strong&gt;,Hurry Up Online Shopping&lt;/h4&gt;
          &lt;div class="modal-img"&gt;&lt;img src="{{ asset('assets/images/gif/online-shopping.gif') }}" alt="online-shopping"&gt;&lt;/div&gt;
          &lt;p class="text-sm-center"&gt;Our difficulty in finding regular clothes that was of great quality, comfortable, and didn't impact the environment given way to creatures of habit.&lt;/p&gt;
@@ -356,7 +356,7 @@
      &lt;/div&gt;
      &lt;div class="modal-body"&gt;
        &lt;h5&gt;Popover in a modal&lt;/h5&gt;
-       &lt;p class="mt-2"&gt;This 
+       &lt;p class="mt-2"&gt;This
          &lt;button class="btn btn-info" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute."&gt;button&lt;/button&gt; triggers a popover on click.
        &lt;/p&gt;
        &lt;hr&gt;
@@ -395,7 +395,7 @@
                &lt;input class="form-control" id="exampleFormControlInput1" type="email" placeholder="cubatheme@gmail.com"&gt;
              &lt;/div&gt;
            &lt;/div&gt;
-           &lt;div class="col-md-12"&gt; 
+           &lt;div class="col-md-12"&gt;
              &lt;div class="form-check mb-3"&gt;
                &lt;input class="form-check-input checkbox-primary" id="flexCheckDefault" type="checkbox" value=""&gt;
                &lt;label class="form-check-label d-block mb-0" for="flexCheckDefault"&gt;You accept our Terms and Privacy Policy by clicking Submit below.&lt;/label&gt;
@@ -1721,8 +1721,8 @@
 &lt;div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter1" aria-hidden="true"&gt;
  &lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
    &lt;div class="modal-content"&gt;
-     &lt;div class="modal-body"&gt; 
-       &lt;div class="modal-toggle-wrapper"&gt;  
+     &lt;div class="modal-body"&gt;
+       &lt;div class="modal-toggle-wrapper"&gt;
          &lt;ul class="modal-img"&gt;
            &lt;li&gt; &lt;img src="{{ asset('assets/images/gif/danger.gif') }}" alt="error"&gt;&lt;/li&gt;
          &lt;/ul&gt;
@@ -1813,7 +1813,7 @@
    &lt;div class="modal-content"&gt;
      &lt;div class="modal-body"&gt;
        &lt;div class="modal-toggle-wrapper"&gt;
-         &lt;ul class="modal-img"&gt; 
+         &lt;ul class="modal-img"&gt;
            &lt;li&gt;&lt;img src="{{ asset('assets/images/gif/whatapp.gif') }}" alt="whatsapp"&gt;&lt;/li&gt;
            &lt;li&gt; &lt;img src="{{ asset('assets/images/gif/instagram.gif') }}" alt="instagram"&gt;&lt;/li&gt;
            &lt;li&gt; &lt;img src="{{ asset('assets/images/gif/facebook.gif') }}" alt="facebook"&gt;&lt;/li&gt;
@@ -1831,7 +1831,7 @@
    &lt;div class="modal-content"&gt;
      &lt;div class="modal-body"&gt;
        &lt;div class="modal-toggle-wrapper"&gt;
-         &lt;ul class="modal-img"&gt; 
+         &lt;ul class="modal-img"&gt;
            &lt;li&gt; &lt;img src="{{ asset('assets/images/gif/logout.gif') }}" alt="logout"&gt;&lt;/li&gt;
          &lt;/ul&gt;
          &lt;h4 class="pt-3 text-center"&gt;Already leaving??&lt;/h4&gt;
@@ -1894,8 +1894,8 @@
 &lt;div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true"&gt;
  &lt;div class="modal-dialog"&gt;
    &lt;div class="modal-content"&gt;
-     &lt;div class="modal-body"&gt; 
-       &lt;div class="modal-toggle-wrapper"&gt;  
+     &lt;div class="modal-body"&gt;
+       &lt;div class="modal-toggle-wrapper"&gt;
          &lt;ul class="modal-img"&gt;
            &lt;li&gt; &lt;img src="{{ asset('assets/images/gif/time.gif') }}" alt="alarm"&gt;&lt;/li&gt;
          &lt;/ul&gt;
@@ -2022,7 +2022,7 @@
          &lt;/div&gt;
        &lt;/div&gt;
      &lt;/div&gt;
-     &lt;div class="modal-footer"&gt; 
+     &lt;div class="modal-footer"&gt;
        &lt;button class="btn btn-secondary" type="button" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
        &lt;button class="btn btn-primary" type="button"&gt;Save&lt;/button&gt;
      &lt;/div&gt;
@@ -2474,7 +2474,7 @@
              &lt;div class="col-xl-12"&gt;
                &lt;div class="card social-profile mb-0"&gt;
                  &lt;div class="card-body"&gt;
-                   &lt;div class="social-img-wrap"&gt; 
+                   &lt;div class="social-img-wrap"&gt;
                      &lt;div class="social-img"&gt;&lt;img src="{{ asset('assets/images/dashboard-5/profile.png') }}" alt="profile"&gt;&lt;/div&gt;
                      &lt;div class="edit-icon"&gt;
                        &lt;svg&gt;
@@ -2581,10 +2581,10 @@
                            &lt;use href="{{ asset('assets/svg/icon-sprite.svg#pencil') }}"&gt;&lt;/use&gt;
                          &lt;/svg&gt;&lt;/a&gt;&lt;/div&gt;&lt;span class="f-light d-block"&gt;Your Balance &lt;/span&gt;
                      &lt;h5 class="mt-1"&gt;$768,987.90&lt;/h5&gt;
-                     &lt;ul&gt; 
+                     &lt;ul&gt;
                        &lt;li&gt;
-                         &lt;div class="balance-item danger"&gt; 
-                           &lt;div class="balance-icon-wrap"&gt; 
+                         &lt;div class="balance-item danger"&gt;
+                           &lt;div class="balance-icon-wrap"&gt;
                              &lt;div class="balance-icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-right"&gt;&lt;line x1="7" y1="7" x2="17" y2="17"&gt;&lt;/line&gt;&lt;polyline points="17 7 17 17 7 17"&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
                            &lt;/div&gt;
                            &lt;div&gt;&lt;span class="f-12 f-light"&gt;Investment  &lt;/span&gt;
@@ -2594,7 +2594,7 @@
                        &lt;/li&gt;
                        &lt;li&gt;
                          &lt;div class="balance-item success"&gt;
-                           &lt;div class="balance-icon-wrap"&gt; 
+                           &lt;div class="balance-icon-wrap"&gt;
                              &lt;div class="balance-icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"&gt;&lt;line x1="7" y1="17" x2="17" y2="7"&gt;&lt;/line&gt;&lt;polyline points="7 7 17 7 17 17"&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
                            &lt;/div&gt;
                            &lt;div&gt;&lt;span class="f-12 f-light"&gt;Cash Back&lt;/span&gt;

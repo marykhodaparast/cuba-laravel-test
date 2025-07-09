@@ -7,13 +7,13 @@
 
 @section('main_content')
     <div class="container-fluid">
-      <div class="row">         
+      <div class="row">
         <div class="col-12 p-0">
           <div>
-            <div class="theme-form">                     
-              <div class="wizard-4" id="wizard">                       
+            <div class="theme-form">
+              <div class="wizard-4" id="wizard">
                 <ul>
-                  <li><a class="logo text-start ps-0" href="{{ route('admin.default_dashboard') }}"><img class="img-fluid for-light" src="{{ asset('assets/images/logo/logo.png') }}" alt="looginpage"><img class="img-fluid for-dark" src="{{ asset('assets/images/logo/logo_dark.png') }}" alt="looginpage"></a></li>
+                  <li><a class="logo text-start ps-0" href="{{ route('admin.wescosa_dashboard') }}"><img class="img-fluid for-light" src="{{ asset('assets/images/logo/logo.png') }}" alt="looginpage"><img class="img-fluid for-dark" src="{{ asset('assets/images/logo/logo_dark.png') }}" alt="looginpage"></a></li>
                   <li><a href="#step-1">
                       <h4>1</h4>
                       <h5>Personal</h5><small>Add personal details</small></a></li>

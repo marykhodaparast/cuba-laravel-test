@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Bonus Ui</li>
@@ -218,11 +218,11 @@
                                 data-clipboard-target="#example-head4" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
                             <pre class="custom-scrollbar"><code class="language-html" id="example-head4">&lt;div class="card-body bg-dark"&gt;
- &lt;div class="d-flex align-items-center gap-3 pills-blogger"&gt; 
+ &lt;div class="d-flex align-items-center gap-3 pills-blogger"&gt;
    &lt;div class="blog-wrapper"&gt;
      &lt;img class="blog-img" src="{{ asset('assets/images/dashboard-2/headphones.png') }}" alt="head-phone"&gt;
    &lt;/div&gt;
-   &lt;div class="blog-content"&gt; 
+   &lt;div class="blog-content"&gt;
      &lt;p class="light-white"&gt;
        &lt;b class="fw-bold"&gt;Smart headphones&lt;/b&gt;—also called smart earbuds or hearable — are high-tech in-ear devices that do more than transmit audio. These headphones are usually wireless, and they can sync up with your phone, tablet, computer or other Bluetooth-enabled device. The main appeal of hearables is convenience, as they allow you to complete common tasks without directly accessing your phone or computer. Smart wireless headphones sync up to other devices using Bluetooth technology, and many of their features rely on data from your smartphone or computer.
      &lt;/p&gt;

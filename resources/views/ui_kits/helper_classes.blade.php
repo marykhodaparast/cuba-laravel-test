@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Ui Kits</li>
@@ -994,7 +994,7 @@
                                             data-clipboard-target="#image-s-copy" title="Copy"><i
                                                 class="icofont icofont-copy-alt"></i></button>
                                         <pre class="custom-scrollbar"><code class="language-html" id="image-s-copy">&lt;div class="row g-3"&gt;
- &lt;div class="col-12 helper-col-6"&gt; 
+ &lt;div class="col-12 helper-col-6"&gt;
    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
      &lt;div class="gradient-border gap-3"&gt;
        &lt;img class="img-30 img-h-30" src="{{ asset('assets/images/blog/comment.jpg') }}" alt="img-size-30"&gt;
@@ -1057,7 +1057,7 @@
                         <div class="code-box-copy"><button class="code-box-copy__btn btn-clipboard"
                                 data-clipboard-target="#form-style-copy" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
-                            <pre class="custom-scrollbar"><code class="language-html" id="form-style-copy">&lt;div class="card-body"&gt; 
+                            <pre class="custom-scrollbar"><code class="language-html" id="form-style-copy">&lt;div class="card-body"&gt;
  &lt;p class="f-s-normal"&gt;This is a&lt;strong&gt;f-s-normal&lt;/strong&gt;font-style&lt;/p&gt;
  &lt;p class="f-s-italic"&gt;This is a&lt;strong&gt;f-s-italic&lt;/strong&gt;font-style&lt;/p&gt;
  &lt;p class="f-s-oblique"&gt;This is a&lt;strong&gt;f-s-oblique&lt;/strong&gt;font-style&lt;/p&gt;
@@ -1430,7 +1430,7 @@
                         <div class="code-box-copy"><button class="code-box-copy__btn btn-clipboard"
                                 data-clipboard-target="#padding-box-copy" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
-                            <pre class="custom-scrollbar"><code class="language-html" id="padding-box-copy">&lt;div class="row g-3"&gt;   
+                            <pre class="custom-scrollbar"><code class="language-html" id="padding-box-copy">&lt;div class="row g-3"&gt;
  &lt;div class="col-xxl-3 col-sm-6"&gt;
    &lt;div class="border-wrapper h-100 alert-light-light dark-helper"&gt;
      &lt;h6 class="mb-3"&gt;Padding Left&lt;/h6&gt;
@@ -1653,7 +1653,7 @@
                         <div class="code-box-copy"><button class="code-box-copy__btn btn-clipboard"
                                 data-clipboard-target="#single-m-copy" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
-                            <pre class="custom-scrollbar"><code class="language-html" id="single-m-copy">&lt;div class="row g-3"&gt;   
+                            <pre class="custom-scrollbar"><code class="language-html" id="single-m-copy">&lt;div class="row g-3"&gt;
  &lt;div class="col-xxl-3 col-sm-6"&gt;
    &lt;div class="border-wrapper h-100 alert-light-light dark-helper"&gt;
      &lt;h6 class="mb-3"&gt;Margin Left&lt;/h6&gt;
@@ -1789,7 +1789,7 @@
                         <div class="code-box-copy"><button class="code-box-copy__btn btn-clipboard"
                                 data-clipboard-target="#fz-copy" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
-                            <pre class="custom-scrollbar"><code class="language-html" id="fz-copy">&lt;div class="gradient-border"&gt; 
+                            <pre class="custom-scrollbar"><code class="language-html" id="fz-copy">&lt;div class="gradient-border"&gt;
  &lt;div class="font-wrapper border"&gt;
    &lt;div class="f-14"&gt;Font-size f-14&lt;/div&gt;
  &lt;/div&gt;

@@ -16,7 +16,7 @@
                     </div>
                 </form>
                 <div class="header-logo-wrapper col-auto p-0">
-                    <div class="logo-wrapper"><a href="{{ route('admin.default_dashboard') }}"><img class="img-fluid for-light"
+                    <div class="logo-wrapper"><a href="{{ route('admin.wescosa_dashboard') }}"><img class="img-fluid for-light"
                                 src="{{ asset('assets/images/logo/logo.png') }}" alt=""><img
                                 class="img-fluid for-dark" src="{{ asset('assets/images/logo/logo_dark.png') }}"
                                 alt=""></a></div>

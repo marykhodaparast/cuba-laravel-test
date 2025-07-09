@@ -316,7 +316,7 @@
                                         src="{{ asset('assets/images/logo/logo.png') }}"></td>
                                 <td class="menu" align="right">
                                     <ul>
-                                        <li><a href="{{ route('admin.default_dashboard') }}" target="_blank">Home</a></li>
+                                        <li><a href="{{ route('admin.wescosa_dashboard') }}" target="_blank">Home</a></li>
                                         <li><a href="{{ route('admin.wish_list') }}" target="_blank">Wishlist</a></li>
                                         <li><a href="{{ route('admin.cart') }}" target="_blank">My cart</a></li>
                                         <li><a href="{{ route('admin.contacts') }}" target="_blank">Contact</a></li>

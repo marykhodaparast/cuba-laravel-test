@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Bonus Ui</li>
@@ -760,9 +760,9 @@
                             <pre class="custom-scrollbar"><code class="language-html" id="custom-scroll-copy">&lt;div class="row gap-xl-0 gap-4"&gt;
  &lt;div class="col-xxl-2 col-xl-3"&gt;
    &lt;nav class="h-100 flex-column align-items-stretch pe-4" id="navbar-scrollspy4"&gt;
-     &lt;nav class="nav nav-pills flex-column"&gt; &lt;a class="nav-link" href="#home1"&gt;Home 
+     &lt;nav class="nav nav-pills flex-column"&gt; &lt;a class="nav-link" href="#home1"&gt;Home
          &lt;div class="custom-arrow"&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="nav-link" href="#about-me"&gt;About Me
-         &lt;div class="custom-arrow"&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="nav-link" href="#project1"&gt;Projects 
+         &lt;div class="custom-arrow"&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="nav-link" href="#project1"&gt;Projects
          &lt;div class="custom-arrow"&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="nav-link" href="#experience1"&gt;Experiences
          &lt;div class="custom-arrow"&gt;&lt;/div&gt;&lt;/a&gt;&lt;/nav&gt;
    &lt;/nav&gt;
@@ -790,17 +790,17 @@
      &lt;div class="common-p-space" id="project1"&gt;
        &lt;h6&gt;Projects&lt;/h6&gt;
        &lt;div class="row g-3 main-project"&gt;
-         &lt;div class="col-xl-12"&gt; 
+         &lt;div class="col-xl-12"&gt;
            &lt;div class="light-card attendance-card"&gt;
              &lt;div class="left-overview-content"&gt;
                &lt;div class="svg-box"&gt;
-                 &lt;svg&gt; 
+                 &lt;svg&gt;
                    &lt;use href="{{ asset('assets/svg/icon-sprite.svg#e-commerce-cart') }}"&gt;&lt;/use&gt;
                  &lt;/svg&gt;
                &lt;/div&gt;
              &lt;/div&gt;
              &lt;div class="right-overview-content"&gt;
-               &lt;div&gt; 
+               &lt;div&gt;
                  &lt;h6&gt;Websites for E-Commerce&lt;/h6&gt;&lt;span class="text-muted text-ellipsis"&gt;Created a comprehensive e-commerce platform with the goal of improving the online purchasing experience. The project's goals were to offer a smooth navigation system, a user-friendly interface, and strong functionality to accommodate a wide variety of products.&lt;/span&gt;
                &lt;/div&gt;
                &lt;div class="d-flex marks-count"&gt;
@@ -810,17 +810,17 @@
              &lt;/div&gt;
            &lt;/div&gt;
          &lt;/div&gt;
-         &lt;div class="col-xl-12"&gt; 
+         &lt;div class="col-xl-12"&gt;
            &lt;div class="light-card attendance-card"&gt;
              &lt;div class="left-overview-content"&gt;
                &lt;div class="svg-box"&gt;
-                 &lt;svg&gt; 
+                 &lt;svg&gt;
                    &lt;use href="{{ asset('assets/svg/icon-sprite.svg#robotics-project') }}"&gt;&lt;/use&gt;
                  &lt;/svg&gt;
                &lt;/div&gt;
              &lt;/div&gt;
              &lt;div class="right-overview-content"&gt;
-               &lt;div&gt; 
+               &lt;div&gt;
                  &lt;h6&gt;Robotics Sensor&lt;/h6&gt;&lt;span class="text-muted text-ellipsis"&gt;Lidar sensor array was put into use for obstacle identification and real-time mapping. With the use of this data, the rover creates an extensive picture of its environment that helps it safely traverse difficult terrain.&lt;/span&gt;
                &lt;/div&gt;
                &lt;div class="d-flex marks-count"&gt;
@@ -830,17 +830,17 @@
              &lt;/div&gt;
            &lt;/div&gt;
          &lt;/div&gt;
-         &lt;div class="col-xl-12"&gt; 
+         &lt;div class="col-xl-12"&gt;
            &lt;div class="light-card attendance-card"&gt;
              &lt;div class="left-overview-content"&gt;
                &lt;div class="svg-box"&gt;
-                 &lt;svg&gt; 
+                 &lt;svg&gt;
                    &lt;use href="{{ asset('assets/svg/icon-sprite.svg#watch-app') }}"&gt;&lt;/use&gt;
                  &lt;/svg&gt;
                &lt;/div&gt;
              &lt;/div&gt;
              &lt;div class="right-overview-content"&gt;
-               &lt;div&gt; 
+               &lt;div&gt;
                  &lt;h6&gt;Watch Application&lt;/h6&gt;&lt;span class="text-muted text-ellipsis"&gt;Keeps an eye on key health indicators like heart rate, steps taken, calories burnt, and sleep habits. makes use of cutting-edge algorithms to deliver precise and useful health insights.&lt;/span&gt;
                &lt;/div&gt;
                &lt;div class="d-flex marks-count"&gt;

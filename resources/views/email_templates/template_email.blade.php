@@ -331,7 +331,7 @@
                                     src="{{ asset('assets/images/logo/logo.png') }}"></td>
                             <td class="menu" align="right">
                                 <ul>
-                                    <li style="display: inline-block;text-decoration: unset"><a href="{{ route('admin.default_dashboard') }}"
+                                    <li style="display: inline-block;text-decoration: unset"><a href="{{ route('admin.wescosa_dashboard') }}"
                                             target="_blank"
                                             style="text-transform: capitalize;color:#444;text-decoration: none;">Home</a>
                                     </li>

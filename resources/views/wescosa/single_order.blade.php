@@ -233,7 +233,7 @@
         .header-col div:first-child {
             font-size: 9px;
             /* smaller for 'Product Name' */
-            color: #2a2727;
+            /* color: #2a2727; */
             /* optional: subtle color */
         }
 
@@ -728,7 +728,7 @@
             if (qrAlreadyExists) {
                 viewQR(qrBtn.dataset.qrUrl);
             } else {
-                fetch(`/orders/generate-qr/${selectedChildId}`, {
+                fetch(`/admin/orders/generate-qr/${selectedChildId}`, {
                         method: "GET"
                     })
                     .then(res => res.json())

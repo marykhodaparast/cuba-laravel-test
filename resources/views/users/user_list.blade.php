@@ -17,7 +17,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                                    <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                             </svg></a></li>
                                     <li class="breadcrumb-item">Users</li>

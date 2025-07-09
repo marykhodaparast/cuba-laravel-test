@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Ui Kits</li>
@@ -62,19 +62,19 @@
                                 data-clipboard-target="#horizontal-solid-divider" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
                             <pre class="custom-scrollbar"><code class="language-html" id="horizontal-solid-divider">&lt;div class="card-body main-divider"&gt;
-   &lt;div class="divider-body divider-body-1 divider-primary"&gt; 
+   &lt;div class="divider-body divider-body-1 divider-primary"&gt;
        &lt;div class="divider-p-primary"&gt;
            &lt;i class="fa-brands fa-modx me-2 txt-primary f-20"&gt;&lt;/i&gt;
            &lt;span class="txt-primary"&gt;Primary&lt;/span&gt;
        &lt;/div&gt;
    &lt;/div&gt;
-   &lt;div class="divider-body divider-body-1 divider-secondary"&gt; 
+   &lt;div class="divider-body divider-body-1 divider-secondary"&gt;
        &lt;div class="divider-p-secondary"&gt;
            &lt;i class="fa-solid fa fa-recycle me-2 txt-secondary f-20"&gt;&lt;/i&gt;
            &lt;span class="txt-secondary"&gt;Secondary &lt;/span&gt;
        &lt;/div&gt;
    &lt;/div&gt;
-   &lt;div class="divider-body divider-body-1 divider-success"&gt; 
+   &lt;div class="divider-body divider-body-1 divider-success"&gt;
        &lt;div class="divider-p-success"&gt;
            &lt;i class="fa-solid fa-leaf me-2 txt-success f-20"&gt;&lt;/i&gt;
            &lt;span class="txt-success"&gt;Success&lt;/span&gt;
@@ -116,7 +116,7 @@
                                 data-clipboard-target="#horizontal-dashed" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
                             <pre class="custom-scrollbar"><code class="language-html" id="horizontal-dashed">&lt;div class="card-body main-divider"&gt;
-   &lt;div class="divider-body divider-body-2 divider-danger"&gt; 
+   &lt;div class="divider-body divider-body-2 divider-danger"&gt;
        &lt;div class="divider-circle bg-light-danger"&gt;
            &lt;i class="fa-solid fa-heart txt-danger"&gt;&lt;/i&gt;
        &lt;/div&gt;

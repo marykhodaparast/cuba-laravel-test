@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Ui Kits</li>
@@ -101,8 +101,8 @@
                         <div class="code-box-copy"><button class="code-box-copy__btn btn-clipboard"
                                 data-clipboard-target="#link-alert-copy" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
-                            <pre class="custom-scrollbar"><code class="language-html" id="link-alert-copy">&lt;div class="row"&gt; 
- &lt;div class="col-xl-6"&gt; 
+                            <pre class="custom-scrollbar"><code class="language-html" id="link-alert-copy">&lt;div class="row"&gt;
+ &lt;div class="col-xl-6"&gt;
    &lt;p class="mb-0"&gt;Primary Alert&lt;/p&gt;
    &lt;div class="alert alert-primary dark" role="alert"&gt;
      &lt;p class="txt-light"&gt;The
@@ -234,7 +234,7 @@
                         <div class="code-box-copy"><button class="code-box-copy__btn btn-clipboard"
                                 data-clipboard-target="#light-alert-copy" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
-                            <pre class="custom-scrollbar"><code class="language-html" id="light-alert-copy">&lt;div class="row"&gt; 
+                            <pre class="custom-scrollbar"><code class="language-html" id="light-alert-copy">&lt;div class="row"&gt;
  &lt;div class="col-xl-6"&gt;
    &lt;p class="mb-0"&gt;Primary Light Alert&lt;/p&gt;
    &lt;div class="alert alert-light-primary" role="alert"&gt;
@@ -350,7 +350,7 @@
                         <div class="code-box-copy"><button class="code-box-copy__btn btn-clipboard"
                                 data-clipboard-target="#outline-alerts-copy" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
-                            <pre class="custom-scrollbar"><code class="language-html" id="outline-alerts-copy">&lt;div class="row gy-3"&gt; 
+                            <pre class="custom-scrollbar"><code class="language-html" id="outline-alerts-copy">&lt;div class="row gy-3"&gt;
  &lt;div class="col-xl-6"&gt;
    &lt;div class="alert txt-primary border-primary alert-dismissible fade show" role="alert"&gt;
      &lt;i data-feather="clock"&gt;&lt;/i&gt;
@@ -508,7 +508,7 @@
                                     class="icofont icofont-copy-alt"></i></button>
                             <pre class="custom-scrollbar"><code class="language-html" id="dismissing-light-alert">&lt;div class="alert alert-bg-warning alert-dismissible fade show" role="alert"&gt;
  &lt;i data-feather="bell"&gt;&lt;/i&gt;
- &lt;p&gt;The 
+ &lt;p&gt;The
    &lt;a class="alert-link txt-warning" href="#!"&gt;"alert-bg-warning"&lt;/a&gt;class can be used to create an alert like this one.
  &lt;/p&gt;
  &lt;button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
@@ -647,7 +647,7 @@
                             <pre class="custom-scrollbar"><code class="language-html" id="custom-alert-popup">&lt;div class="alert-box"&gt;
  &lt;div class="alert alert-dismissible justify-content-center p-0 fade show" role="alert"&gt;
    &lt;div class="alert-body"&gt;
-     &lt;svg&gt; 
+     &lt;svg&gt;
        &lt;use href="{{ asset('assets/svg/icon-sprite.svg#alert-popup') }}"&gt;&lt;/use&gt;
      &lt;/svg&gt;
      &lt;h6 class="mb-1"&gt;A Crucial Update is Now Available&lt;/h6&gt;
@@ -749,8 +749,8 @@
                         <div class="code-box-copy"><button class="code-box-copy__btn btn-clipboard"
                                 data-clipboard-target="#icon-alert-copy" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
-                            <pre class="custom-scrollbar"><code class="language-html" id="icon-alert-copy">&lt;div class="row"&gt; 
- &lt;div class="col-md-6"&gt; 
+                            <pre class="custom-scrollbar"><code class="language-html" id="icon-alert-copy">&lt;div class="row"&gt;
+ &lt;div class="col-md-6"&gt;
    &lt;div class="alert alert-primary d-flex align-items-center" role="alert"&gt;
      &lt;div&gt;
        &lt;i class="stroke-primary" data-feather="bar-chart-2"&gt;&lt;/i&gt;
@@ -788,7 +788,7 @@
      &lt;/span&gt;
    &lt;/div&gt;
  &lt;/div&gt;
- &lt;div class="col-md-6"&gt; 
+ &lt;div class="col-md-6"&gt;
    &lt;div class="alert alert-danger d-flex align-items-center" role="alert"&gt;
      &lt;div&gt;
        &lt;i class="stroke-danger" data-feather="alert-circle"&gt;&lt;/i&gt;

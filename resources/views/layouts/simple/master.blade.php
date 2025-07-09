@@ -7,7 +7,7 @@
 </head>
 
 @switch(Route::currentRouteName())
-    @case('admin.default_dashboard')
+    @case('admin.wescosa_dashboard')
         <body onload="startTime()">
         @break
 

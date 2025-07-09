@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.default_dashboard') }}"> <svg class="stroke-icon">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.wescosa_dashboard') }}"> <svg class="stroke-icon">
                                     <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                                 </svg></a></li>
                         <li class="breadcrumb-item">Ui Kits</li>
@@ -165,7 +165,7 @@
                                 data-clipboard-target="#sizing-placeholder-card" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
                             <pre class="custom-scrollbar"><code class="language-html" id="sizing-placeholder-card">&lt;div class="row g-3"&gt;
- &lt;div class="col-xxl-12 col-md-6 box-col-6"&gt; 
+ &lt;div class="col-xxl-12 col-md-6 box-col-6"&gt;
    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
      &lt;h6 class="sub-title pb-1"&gt;Width&lt;/h6&gt;
      &lt;p class="f-m-light"&gt;You can change the width through grid column classes, width utilities, or inline styles.
@@ -179,7 +179,7 @@
      &lt;/div&gt;
    &lt;/div&gt;
  &lt;/div&gt;
- &lt;div class="col-xxl-12 col-md-6 box-col-6"&gt; 
+ &lt;div class="col-xxl-12 col-md-6 box-col-6"&gt;
    &lt;div class="card-wrapper border rounded-3 h-100"&gt;
      &lt;h6 class="sub-title pb-1"&gt;Sizing&lt;/h6&gt;
      &lt;p class="f-m-light"&gt;The size of
@@ -283,7 +283,7 @@
                         <div class="code-box-copy"><button class="code-box-copy__btn btn-clipboard"
                                 data-clipboard-target="#custom-animation-place" title="Copy"><i
                                     class="icofont icofont-copy-alt"></i></button>
-                            <pre class="custom-scrollbar"><code class="language-html" id="custom-animation-place">&lt;div class="row gy-3"&gt; 
+                            <pre class="custom-scrollbar"><code class="language-html" id="custom-animation-place">&lt;div class="row gy-3"&gt;
  &lt;div class="col-sm-6"&gt;
    &lt;div class="placeholder-body"&gt;
      &lt;div class="placeholder-start"&gt;
