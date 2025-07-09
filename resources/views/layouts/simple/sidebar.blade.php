@@ -31,17 +31,21 @@
                     </li>
 
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="{{ route('admin.wescosa_dashboard') }}"><svg
-                                class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav"
+                            href="{{ route('admin.wescosa_dashboard') }}"><svg class="stroke-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
                             </svg><svg class="fill-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#fill-home') }}"></use>
                             </svg><span>Dashboard</span></a>
                     </li>
 
+                    @php
+                        $isActive = request()->routeIs('admin.wescosa_orders_list', 'admin.wescosa.add_purchase') ? 'active' : '';
+                    @endphp
+
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="{{ route('admin.wescosa_orders_list') }}"><svg
-                                class="stroke-icon">
+                            class="sidebar-link sidebar-title link-nav active"
+                            href="{{ route('admin.wescosa_orders_list') }}"><svg class="stroke-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-price') }}"></use>
                             </svg><svg class="fill-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#fill-price') }}"></use>
@@ -72,7 +76,8 @@
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#fill-maps') }}"></use>
                             </svg><span>Settings</span></a></li>
                     <li class="sidebar-list mt-5"><a href="{{ route('logout') }}"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i data-feather="log-in"></i><span>Log out</span></a></li>
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
+                                data-feather="log-in"></i><span>Log out</span></a></li>
                     <form action="{{ route('logout') }}" method="POST" class="d-none" id="logout-form">
                         @csrf
                     </form>

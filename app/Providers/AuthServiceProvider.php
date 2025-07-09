@@ -26,7 +26,6 @@ use App\Policies\BannerPolicy;
 use App\Policies\BidPolicy;
 use App\Policies\BlogPolicy;
 use App\Policies\CurrencyPolicy;
-use App\Policies\CustomerPolicy;
 use App\Policies\DocumentPolicy;
 use App\Policies\ServicePackagePolicy;
 use App\Policies\ServicePolicy;
@@ -55,25 +54,25 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         User::class => UserPolicy::class,
-        Customer::class => CustomerPolicy::class,
-        Currency::class => CurrencyPolicy::class,
-        Document::class => DocumentPolicy::class,
-        Service::class => ServicePolicy::class,
-        SystemLang::class => SystemLangPolicy::class,
-        ServicePackage::class => ServicePackagePolicy::class,
-        TimeSlot::class => TimeSlotPolicy::class,
-        BankDetail::class => BankDetailPolicy::class,
-        Blog::class => BlogPolicy::class,
-        Plan::class => PlanPolicy::class,
-        Tag::class => TagPolicy::class,
-        Banner::class => BannerPolicy::class,
-        Setting::class => SettingPolicy::class,
-        UserSubscription::class => SubscriptionPolicy::class,
-        WithdrawRequest::class => WithdrawRequestPolicy::class,
-        Tax::class => TaxPolicy::class,
-        Zone::class => ZonePolicy::class,
-        ServiceRequest::class => ServiceRequestPolicy::class,
-        Bid::class => BidPolicy::class,
+        //Customer::class => CustomerPolicy::class,
+        // Currency::class => CurrencyPolicy::class,
+        // Document::class => DocumentPolicy::class,
+        // Service::class => ServicePolicy::class,
+        // SystemLang::class => SystemLangPolicy::class,
+        // ServicePackage::class => ServicePackagePolicy::class,
+        // TimeSlot::class => TimeSlotPolicy::class,
+        // BankDetail::class => BankDetailPolicy::class,
+        // Blog::class => BlogPolicy::class,
+        // Plan::class => PlanPolicy::class,
+        // Tag::class => TagPolicy::class,
+        // Banner::class => BannerPolicy::class,
+        // Setting::class => SettingPolicy::class,
+        // UserSubscription::class => SubscriptionPolicy::class,
+        // WithdrawRequest::class => WithdrawRequestPolicy::class,
+        // Tax::class => TaxPolicy::class,
+        // Zone::class => ZonePolicy::class,
+        // ServiceRequest::class => ServiceRequestPolicy::class,
+        // Bid::class => BidPolicy::class,
     ];
 
     /**

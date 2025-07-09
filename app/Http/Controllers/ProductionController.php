@@ -41,7 +41,7 @@ class ProductionController extends Controller
     {
         $production_request = Production::findOrFail($id);
 
-        return view('single_order')->with([
+        return view('wescosa.single_order')->with([
             'data' => $production_request,
             'id' => $id
         ]);

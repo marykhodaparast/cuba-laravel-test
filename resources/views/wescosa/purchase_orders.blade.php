@@ -43,7 +43,7 @@
                         @foreach($data as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
-                            <td><a href="/orders/single_order/{{ $item->id }}/" class="" style="text-decoration: none;color: black;">PO-{{ 1000 + $item->id }}</a></td>
+                            <td><a href="/admin/orders/single_order/{{ $item->id }}/" class="" style="text-decoration: none;color: black;">PO-{{ 1000 + $item->id }}</a></td>
                             <td>
                                 @switch($item->product_name)
                                 @case('1')
