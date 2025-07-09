@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductionController;
 use Illuminate\Support\Facades\Artisan;
 
 
@@ -68,6 +69,12 @@ Route::view('logistics-dashboard', 'dashboards.logistics_dashboard')->name('logi
 //WESCOSA Dashboard
 Route::view('wescosa-dashboard', 'wescosa.dashboard')->name('wescosa_dashboard');
 Route::view('wescosa-purchase-orders', 'wescosa.purchase_orders')->name('wescosa_purchase_orders');
+Route::view('wescosa-add-purchase', 'wescosa.add_purchase')->name('wescosa.add_purchase');
+
+Route::get('/orders/po_list/', [ProductionController::class, 'index'])->name('wescosa_orders_list');
+Route::get('/orders/generate-qr/{id}', [ProductionController::class, 'generateQR']);
+Route::get('/orders/single_order/{id}', [ProductionController::class, 'single_order'])->name('single_order');
+Route::post('/orders/add_purchase', [ProductionController::class, 'store'])->name('orders_add_purchase.store');
 
 //widgets
 Route::view('general-widget', 'widgets.general_widget')->name('general_widget');

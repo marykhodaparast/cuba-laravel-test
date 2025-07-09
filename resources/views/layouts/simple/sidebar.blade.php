@@ -40,7 +40,7 @@
                     </li>
 
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                            class="sidebar-link sidebar-title link-nav" href="{{ route('admin.wescosa_purchase_orders') }}"><svg
+                            class="sidebar-link sidebar-title link-nav" href="{{ route('admin.wescosa_orders_list') }}"><svg
                                 class="stroke-icon">
                                 <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-price') }}"></use>
                             </svg><svg class="fill-icon">
