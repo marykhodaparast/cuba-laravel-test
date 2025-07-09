@@ -13,7 +13,7 @@
 @section('main_content')
     <div class="col-12 mt-100">
         <div class="card pt-3 bg-light">
-            <form method="GET" class="d-flex justify-content-between mb-3 pb-3 ps-3 pe-3 w-100">
+            <form method="GET" action="{{ route("admin.wescosa_orders_list") }}" class="d-flex justify-content-between mb-3 pb-3 ps-3 pe-3 w-100">
                 <div class="input-group w-25">
                     <input type="text" name="q" class="form-control" placeholder="Search by PO " value="">
                     <button class="btn btn-outline-secondary" type="submit">
@@ -40,6 +40,83 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($data as $item)
+                        <tr>
+                            <td>{{ $item->id }}</td>
+                            <td><a href="/orders/single_order/{{ $item->id }}/" class="" style="text-decoration: none;color: black;">PO-{{ 1000 + $item->id }}</a></td>
+                            <td>
+                                @switch($item->product_name)
+                                @case('1')
+                                MS100 Main Switch
+                                @break
+                                @case('2')
+                                MS250 Main Switch
+                                @break
+                                @case('3')
+                                TB125 Tie Breaker
+                                @break
+                                @case('4')
+                                TB160 Tie Breaker
+                                @break
+                                @case('5')
+                                DB Single Phase
+                                @break
+                                @case('6')
+                                DB Three Phase
+                                @break
+                                @case('7')
+                                Starter Panel
+                                @break
+                                @case('8')
+                                PLC Control Panel
+                                @break
+                                @case('9')
+                                Copper Busbar 100A
+                                @break
+                                @case('10')
+                                Aluminum Busbar 200A
+                                @break
+                                @case('11')
+                                Relay 230V
+                                @break
+                                @case('12')
+                                Contactor 40A
+                                @break
+                                @case('13')
+                                Cable Lug
+                                @break
+                                @case('14')
+                                PVC Trunking
+                                @break
+                                @case('15')
+                                1kVA Transformer
+                                @break
+                                @case('16')
+                                5kVA Transformer
+                                @break
+                                @case('17')
+                                MCB 10A
+                                @break
+                                @case('18')
+                                RCCB 63A
+                                @break
+                                @case('19')
+                                Digital Voltmeter
+                                @break
+                                @case('20')
+                                Energy Meter
+                                @break
+                                @endswitch
+                            </td>
+                            <td>{{ $item->customer }}</td>
+                            <td>{{ \Carbon\Carbon::parse($item->request_date)->format('M. j, Y') }}</td>
+                            <td>{{ \Carbon\Carbon::parse($item->etd)->format('M. j, Y') }}</td>
+                        </tr>
+
+                        @endforeach
+
+                    </tbody>
+                    {{-- <tbody>
                         <tr>
                             <td>1</td>
                             <td><a href="/orders/single_order/1/" class=""
@@ -89,7 +166,7 @@
                         </tr>
 
 
-                    </tbody>
+                    </tbody> --}}
                 </table>
             </div>
         </div>

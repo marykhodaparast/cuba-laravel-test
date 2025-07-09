@@ -17,11 +17,58 @@
             margin: 30px 0;
         }
 
-        
+        /* Add internal padding inside card body */
+        .card-body {
+            padding: 1.5rem;
+            /* increase if needed */
+        }
+
+        /* Spacing between form groups */
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        /* Button area spacing */
+        .buttons {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        /* Optional: make buttons consistent size */
+        .buttons .btn {
+            min-width: 120px;
+        }
+
+        /* Responsive spacing on smaller screens */
+        @media (max-width: 768px) {
+            .card-body {
+                padding: 1rem;
+            }
+        }
+
+        .error-msg {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            margin-left: 3px;
+        }
+
+        .toast{
+            display: none !important;
+        }
     </style>
 @endsection
 
 @section('main_content')
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     <div class="container-fluid">
         <div class="row">
             <div class="col">
@@ -44,10 +91,9 @@
 
         <div class="row">
             <div class="row">
-                <form class="form" method="post" action="/orders/add_purchase/" id="purchaseForm"
-                    onsubmit="return validateAddPurchaseForm();">
-                    <input type="hidden" name="csrfmiddlewaretoken"
-                        value="CmxiCAIS6FJmDkyqN4rrwDygMW6u5ZiCvihNbBkyfmGiPVMSpxKVEtP98sSJhcHy">
+                <form class="form" method="post" action="{{ route('admin.orders_add_purchase.store') }}"
+                    id="purchaseForm" onsubmit="return validateAddPurchaseForm();">
+                    @csrf
 
                     <div class="row">
                         <section id="multiple-column-form">
@@ -73,6 +119,46 @@
                                                             <select id="product-select" class="form-control"
                                                                 name="product_name" id="product_name" required>
                                                                 <option value="">-- Select Product --</option>
+                                                                <option value="1">MS100 Main Switch</option>
+
+                                                                <option value="2">MS250 Main Switch</option>
+
+                                                                <option value="3">TB125 Tie Breaker</option>
+
+                                                                <option value="4">TB160 Tie Breaker</option>
+
+                                                                <option value="5">DB Single Phase</option>
+
+                                                                <option value="6">DB Three Phase</option>
+
+                                                                <option value="7">Starter Panel</option>
+
+                                                                <option value="8">PLC Control Panel</option>
+
+                                                                <option value="9">Copper Busbar 100A</option>
+
+                                                                <option value="10">Aluminum Busbar 200A</option>
+
+                                                                <option value="11">Relay 230V</option>
+
+                                                                <option value="12">Contactor 40A</option>
+
+                                                                <option value="13">Cable Lug</option>
+
+                                                                <option value="14">PVC Trunking</option>
+
+                                                                <option value="15">1kVA Transformer</option>
+
+                                                                <option value="16">5kVA Transformer</option>
+
+                                                                <option value="17">MCB 10A</option>
+
+                                                                <option value="18">RCCB 63A</option>
+
+                                                                <option value="19">Digital Voltmeter</option>
+
+                                                                <option value="20">Energy Meter</option>
+
 
                                                             </select>
                                                         </div>
@@ -233,4 +319,305 @@
 
     <script src="{{ asset('assets/js/icons/icons-notify.js') }}"></script>
     <script src="{{ asset('assets/js/icons/feather-icon/feather-icon-clipart.js') }}"></script>
+    <script>
+        ValidateJobNumber = () => {
+            const jobNumber = document.getElementById('job_number').value;
+            const errorMsg = document.getElementById('error-msgjob');
+            if (jobNumber.trim() === '') {
+                errorMsg.textContent = 'Job Number is required.';
+                return false;
+            } else {
+                errorMsg.textContent = '';
+                return true;
+            }
+        };
+        validateProjectName = () => {
+            const projectName = document.getElementById('project_name').value;
+            const errorMsg = document.getElementById('error-msgproject');
+            if (projectName.trim() === '') {
+                errorMsg.textContent = 'Project Name is required.';
+                return false;
+            } else {
+                errorMsg.textContent = '';
+                return true;
+            }
+        };
+        validateCustomer = () => {
+            const customer = document.getElementById('customer').value;
+            const errorMsg = document.getElementById('error-msgcustomer');
+            if (customer.trim() === '') {
+                errorMsg.textContent = 'Customer is required.';
+                return false;
+            } else {
+                errorMsg.textContent = '';
+                return true;
+            }
+        };
+        validateNoOfStructures = () => {
+            const noOfStructuresInput = document.getElementById('no_of_structures');
+            const value = noOfStructuresInput.value.trim();
+            const errorMsg = document.getElementById('error-msgstructures');
+
+            errorMsg.textContent = ''; // Clear previous error
+
+            if (value === '') {
+                errorMsg.textContent = 'No. of Structures is required. You can enter 0 if not applicable.';
+                noOfStructuresInput.classList.add('is-invalid');
+                return false;
+            } else if (isNaN(value) || parseInt(value) < 0) {
+                errorMsg.textContent = 'Negative numbers are not allowed.';
+                noOfStructuresInput.classList.add('is-invalid');
+                return false;
+            } else if (parseInt(value) > 9999) {
+                errorMsg.textContent = 'Please enter a value less than or equal to 9999.';
+                noOfStructuresInput.classList.add('is-invalid');
+                return false;
+            }
+
+            noOfStructuresInput.classList.remove('is-invalid');
+            return true;
+        };
+        validateNoOfWorkers = () => {
+            const noOfWorkersInput = document.getElementById('no_of_workers');
+            const value = noOfWorkersInput.value.trim();
+            const errorMsg = document.getElementById('error-msgworkers');
+            errorMsg.textContent = ''; // Clear previous error
+            if (value === '') {
+                errorMsg.textContent = 'No. of Workers is required. You can enter 0 if not applicable.';
+                noOfWorkersInput.classList.add('is-invalid');
+                return false;
+            } else if (isNaN(value) || parseInt(value) < 0) {
+                errorMsg.textContent = 'Negative numbers are not allowed.';
+                noOfWorkersInput.classList.add('is-invalid');
+                return false;
+            } else if (parseInt(value) > 9999) {
+                errorMsg.textContent = 'Please enter a value less than or equal to 9999.';
+                noOfWorkersInput.classList.add('is-invalid');
+                return false;
+            }
+            noOfWorkersInput.classList.remove('is-invalid');
+            return true;
+        };
+        validateFeeders = () => {
+            const feedersInput = document.getElementById('feeders');
+            const value = feedersInput.value.trim();
+            const errorMsg = document.getElementById('error-msgfeeders');
+            errorMsg.textContent = ''; // Clear previous error
+            if (value === '') {
+                errorMsg.textContent = 'Feeders is required. You can enter 0 if not applicable.';
+                feedersInput.classList.add('is-invalid');
+                return false;
+            } else if (isNaN(value) || parseInt(value) < 0) {
+                errorMsg.textContent = 'Negative numbers are not allowed.';
+                feedersInput.classList.add('is-invalid');
+                return false;
+            } else if (parseInt(value) > 9999) {
+                errorMsg.textContent = 'Please enter a value less than or equal to 9999.';
+                feedersInput.classList.add('is-invalid');
+                return false;
+            }
+            feedersInput.classList.remove('is-invalid');
+            return true;
+        };
+        validateMain = () => {
+            const mainInput = document.getElementById('main');
+            const value = mainInput.value.trim();
+            const errorMsg = document.getElementById('error-msgmain');
+            errorMsg.textContent = ''; // Clear previous error
+            if (value === '') {
+                errorMsg.textContent = 'Main is required. You can enter 0 if not applicable.';
+                mainInput.classList.add('is-invalid');
+                return false;
+            } else if (isNaN(value) || parseInt(value) < 0) {
+                errorMsg.textContent = 'Negative numbers are not allowed.';
+                mainInput.classList.add('is-invalid');
+                return false;
+            } else if (parseInt(value) > 9999) {
+                errorMsg.textContent = 'Please enter a value less than or equal to 9999.';
+                mainInput.classList.add('is-invalid');
+                return false;
+            }
+            mainInput.classList.remove('is-invalid');
+            return true;
+        };
+        validateTie = () => {
+            const tieInput = document.getElementById('tie');
+            const value = tieInput.value.trim();
+            const errorMsg = document.getElementById('error-msgtie');
+            errorMsg.textContent = ''; // Clear previous error
+            if (value === '') {
+                errorMsg.textContent = 'Tie is required. You can enter 0 if not applicable.';
+                tieInput.classList.add('is-invalid');
+                return false;
+            } else if (isNaN(value) || parseInt(value) < 0) {
+                errorMsg.textContent = 'Negative numbers are not allowed.';
+                tieInput.classList.add('is-invalid');
+                return false;
+            } else if (parseInt(value) > 9999) {
+                errorMsg.textContent = 'Please enter a value less than or equal to 9999.';
+                tieInput.classList.add('is-invalid');
+                return false;
+            }
+            tieInput.classList.remove('is-invalid');
+            return true;
+        };
+        validateRequestDate = () => {
+            const requestDateInput = document.getElementById('request_date');
+            const requestDate = new Date(requestDateInput.value);
+            const today = new Date();
+            const errorMsg = document.getElementById('error-msgrequestdate');
+            errorMsg.textContent = ''; // Clear previous error
+            if (requestDateInput.value === '') {
+                errorMsg.textContent = 'Request Date is required.';
+                requestDateInput.classList.add('is-invalid');
+                return false;
+            }
+            // else if (requestDate < today) {
+            //     errorMsg.textContent = 'Request Date cannot be in the past.';
+            //     requestDateInput.classList.add('is-invalid');
+            //     return false;
+            // }
+            requestDateInput.classList.remove('is-invalid');
+            return true;
+        };
+        validateStartDate = () => {
+            const startDateInput = document.getElementById('start_date');
+            const startDate = new Date(startDateInput.value);
+            const requestDateInput = document.getElementById('request_date');
+            const requestDate = new Date(requestDateInput.value);
+
+            const errorMsg = document.getElementById('error-msgstartdate');
+            errorMsg.textContent = ''; // Clear previous error
+
+            if (startDateInput.value === '') {
+                errorMsg.textContent = 'Start Date is required.';
+                startDateInput.classList.add('is-invalid');
+                return false;
+            } else if (startDate < requestDate) {
+                errorMsg.textContent = 'Start Date cannot be before Request Date.';
+                startDateInput.classList.add('is-invalid');
+                return false;
+            }
+            startDateInput.classList.remove('is-invalid');
+            return true;
+        };
+        validateEndDate = () => {
+            const endDateInput = document.getElementById('end_date');
+            const endDate = new Date(endDateInput.value);
+            const startDateInput = document.getElementById('start_date');
+            const startDate = new Date(startDateInput.value);
+            const errorMsg = document.getElementById('error-msgenddate');
+            errorMsg.textContent = ''; // Clear previous error
+            if (endDateInput.value === '') {
+                // errorMsg.textContent = 'End Date is required.';
+                // endDateInput.classList.add('is-invalid');
+                return true;
+            }
+            if (endDateInput) {
+                if (endDate < startDate) {
+                    errorMsg.textContent = 'End Date cannot be before Start Date.';
+                    endDateInput.classList.add('is-invalid');
+                    return false;
+                }
+            }
+            endDateInput.classList.remove('is-invalid');
+            return true;
+        }
+
+        function validateETD() {
+            const etdInput = document.getElementById('etd');
+            const etd = new Date(etdInput.value);
+            const startDateInput = document.getElementById('start_date');
+            const startDate = new Date(startDateInput.value);
+            const errorMsg = document.getElementById('error-msgetd');
+            errorMsg.textContent = ''; // Clear previous error
+            if (etdInput.value === '') {
+                // errorMsg.textContent = 'ETD is required.';
+                // etdInput.classList.add('is-invalid');
+                return true;
+            }
+            if (etd < startDate) {
+                errorMsg.textContent = 'ETD cannot be before Start Date.';
+                etdInput.classList.add('is-invalid');
+                return false;
+            }
+            etdInput.classList.remove('is-invalid');
+            return true;
+        }
+
+        function validateATD() {
+            const atdInput = document.getElementById('atd');
+            const atd = new Date(atdInput.value);
+            const startdateInput = document.getElementById('start_date');
+            const start_date = new Date(startdateInput.value);
+            const errorMsg = document.getElementById('error-msgatd');
+            errorMsg.textContent = ''; // Clear previous error
+            if (atdInput.value === '') {
+                // errorMsg.textContent = 'ATD is required.';
+                // atdInput.classList.add('is-invalid');
+                return true;
+            }
+            if (atd < start_date) {
+                errorMsg.textContent = 'ATD cannot be before Start Date.';
+                atdInput.classList.add('is-invalid');
+                return false;
+            }
+            atdInput.classList.remove('is-invalid');
+            return true;
+        }
+
+        // Master validation function called on form submission
+        function validateAddPurchaseForm() {
+            let isValid = true;
+
+            // Run all validations and update isValid
+            isValid = ValidateJobNumber() && isValid; // Validate Job Number
+            isValid = validateProjectName() && isValid; // Validate Project Name
+            isValid = validateCustomer() && isValid; // Validate Customer
+            isValid = validateNoOfStructures() && isValid; // Validate No. of Structures
+            isValid = validateNoOfWorkers() && isValid; // Validate No. of Workers
+            isValid = validateFeeders() && isValid; // Validate Feeders
+            isValid = validateMain() && isValid; // Validate Main
+            isValid = validateTie() && isValid; // Validate Tie
+            isValid = validateRequestDate() && isValid; // Validate Request Date
+            isValid = validateStartDate() && isValid; // Validate Start Date
+            isValid = validateEndDate() && isValid; // Validate End Date
+            isValid = validateETD() && isValid; // Validate ETD
+            isValid = validateATD() && isValid; // Validate ATD
+            return isValid; // Return the final validation result
+        }
+
+        //add event listener to the form submit event
+        document.addEventListener('DOMContentLoaded', function() {
+            const jobnumberInput = document.getElementById('job_number');
+            const projectNameInput = document.getElementById('project_name');
+            const customerInput = document.getElementById('customer');
+            const noOfStructuresInput = document.getElementById('no_of_structures');
+            const noOfWorkersInput = document.getElementById('no_of_workers');
+            const feedersInput = document.getElementById('feeders');
+            const mainInput = document.getElementById('main');
+            const tieInput = document.getElementById('tie');
+            const requestDateInputEl = document.getElementById('request_date');
+            const startDateInput = document.getElementById('start_date');
+            const endDateInput = document.getElementById('end_date');
+            const ETDInput = document.getElementById('etd');
+            const ATDInput = document.getElementById('atd');
+
+            //event listener for input change
+            jobnumberInput.addEventListener('input', ValidateJobNumber);
+            projectNameInput.addEventListener('input', validateProjectName);
+            customerInput.addEventListener('input', validateCustomer);
+            noOfStructuresInput.addEventListener('input', validateNoOfStructures);
+            noOfWorkersInput.addEventListener('input', validateNoOfWorkers);
+            feedersInput.addEventListener('input', validateFeeders);
+            mainInput.addEventListener('input', validateMain);
+            tieInput.addEventListener('input', validateTie);
+            requestDateInputEl.addEventListener('input', validateRequestDate);
+            startDateInput.addEventListener('input', validateStartDate);
+            endDateInput.addEventListener('input', validateEndDate);
+            ETDInput.addEventListener('input', validateETD);
+            ATDInput.addEventListener('input', validateATD);
+
+        });
+    </script>
 @endsection
