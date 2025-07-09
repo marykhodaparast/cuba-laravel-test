@@ -256,15 +256,6 @@
         <div class="col-12">
             <h4><b>Purchase Details</b></h4>
         </div>
-        {{-- <div class="col-2">
-            <div class="profile">
-                <img src="{{ asset('user1.jpg') }}" alt="Profile Image">
-                <div class="profile-text">
-                    <h6>{{ auth()?->user()?->name }}</h6>
-                    <p>Production Manager</p>
-                </div>
-            </div>
-        </div> --}}
     </div>
 
     <!-- Dashboard Content -->
@@ -634,4 +625,324 @@
 
     <script src="{{ asset('assets/js/icons/icons-notify.js') }}"></script>
     <script src="{{ asset('assets/js/icons/feather-icon/feather-icon-clipart.js') }}"></script>
+
+    <script id="childJson" type="application/json">
+        [{
+            "id": 157
+            , "name": "Mounting Plate #2"
+            , "quantity": 2
+            , "unit_price": "245.03"
+            , "total_price": "490.06"
+            , "ordered_date": "08-08-2025"
+            , "eta": ""
+            , "ata": ""
+            , "inspection": ""
+            , "pm": ""
+            , "image": "/5_710kykO.png"
+            , "qr_url": ""
+        }, {
+            "id": 158
+            , "name": "Fuse Holder #5"
+            , "quantity": 10
+            , "unit_price": "495.19"
+            , "total_price": "4951.90"
+            , "ordered_date": "08-08-2025"
+            , "eta": ""
+            , "ata": ""
+            , "inspection": ""
+            , "pm": ""
+            , "image": "/7_gYXcNbt.png"
+            , "qr_url": ""
+        }, {
+            "id": 159
+            , "name": "Spare Circuit Breaker #6"
+            , "quantity": 5
+            , "unit_price": "445.64"
+            , "total_price": "2228.20"
+            , "ordered_date": "08-08-2025"
+            , "eta": ""
+            , "ata": ""
+            , "inspection": ""
+            , "pm": ""
+            , "image": "/2_dMxAtFY.png"
+            , "qr_url": ""
+        }, {
+            "id": 160
+            , "name": "Cooling Fan #3"
+            , "quantity": 8
+            , "unit_price": "315.01"
+            , "total_price": "2520.08"
+            , "ordered_date": "08-08-2025"
+            , "eta": ""
+            , "ata": ""
+            , "inspection": ""
+            , "pm": ""
+            , "image": "/4_lYeDMYY.png"
+            , "qr_url": ""
+        }, {
+            "id": 161
+            , "name": "Protective Cover #1"
+            , "quantity": 4
+            , "unit_price": "157.29"
+            , "total_price": "629.16"
+            , "ordered_date": "08-08-2025"
+            , "eta": ""
+            , "ata": ""
+            , "inspection": ""
+            , "pm": ""
+            , "image": "/11_qZLVMe9.png"
+            , "qr_url": ""
+        }, {
+            "id": 162
+            , "name": "Wiring Kit #4"
+            , "quantity": 6
+            , "unit_price": "395.63"
+            , "total_price": "2373.78"
+            , "ordered_date": "08-08-2025"
+            , "eta": ""
+            , "ata": ""
+            , "inspection": ""
+            , "pm": ""
+            , "image": "/6_UMmSbAS.png"
+            , "qr_url": ""
+        }]
+
+    </script>
+
+    <script>
+        const csrftoken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        let selectedChildId = 1; // set this dynamically
+        let qrAlreadyExists = false;
+
+        function handleQRClick() {
+            const name = document.getElementById('child-name')?.textContent || '';
+            const qty = document.getElementById('child-qty')?.textContent || '';
+            const poNumber = document.getElementById('ponum')?.textContent.trim() || '';
+
+            document.getElementById('qrName').textContent = name;
+            document.getElementById('qrQty').textContent = qty;
+            document.getElementById('qrPO').textContent = poNumber;
+
+            const qrBtn = document.getElementById("qr-btn");
+
+            if (qrAlreadyExists) {
+                viewQR(qrBtn.dataset.qrUrl);
+            } else {
+                fetch(`/orders/generate-qr/${selectedChildId}`, {
+                        method: "GET"
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.success) {
+                            qrAlreadyExists = true;
+                            qrBtn.innerText = "View QR";
+                            qrBtn.dataset.qrUrl = data.qr_url;
+                            viewQR(data.qr_url);
+                        } else {
+                            alert("QR Generation failed");
+                        }
+                    });
+            }
+
+        }
+
+        function viewQR(qrUrl) {
+            document.getElementById('qrImage').src = qrUrl;
+            new bootstrap.Modal(document.getElementById('qrModal')).show();
+        }
+
+        function printSVGImageFromURL(imgSelector) {
+            const img = document.querySelector(imgSelector);
+            if (!img) {
+                alert("QR Image not found");
+                return;
+            }
+
+            const imgURL = img.src;
+
+            fetch(imgURL)
+                .then(res => res.text())
+                .then(svgText => {
+                    const svgBlob = new Blob([svgText], {
+                        type: "image/svg+xml"
+                    });
+                    const url = URL.createObjectURL(svgBlob);
+
+                    const modalContent = document.querySelector('#qrModal .modal-content');
+
+                    if (!modalContent) {
+                        console.error("Modal content not found");
+                        return;
+                    }
+
+                    const contentToPrint = modalContent.innerHTML;
+
+                    const image = new Image();
+                    image.onload = async function() {
+                        await new Promise(resolve => {
+                            if (image.complete) resolve();
+                            else image.onload = resolve;
+                        });
+                        if (!image.complete) {
+                            console.log("Image not fully loaded yet");
+                            return;
+                        }
+
+                        const canvas = document.createElement("canvas");
+                        canvas.width = image.width;
+                        canvas.height = image.height;
+
+                        const ctx = canvas.getContext("2d");
+                        ctx.drawImage(image, 0, 0);
+                        URL.revokeObjectURL(url);
+
+                        const pngUrl = canvas.toDataURL("image/png");
+
+                        const printWindow = window.open('', '', 'width=800,height=600');
+                        printWindow.document.write('<html><head><title>Print QR</title>');
+                        printWindow.document.write(`
+                            <style>
+                            @media print {
+                                @page { size: 80mm 100mm; margin: 5mm; }
+                                body { font-family: Arial; text-align: center; }
+                                img { max-width: 150px; }
+                            }
+                            </style>
+                        `);
+                        printWindow.document.write('</head><body>');
+                        // printWindow.document.write(`<img src="${pngUrl}" />`);
+                        printWindow.document.write(contentToPrint);
+                        printWindow.document.write('</body></html>');
+                        printWindow.document.close();
+
+                        setTimeout(() => {
+                            printWindow.focus();
+                            printWindow.print();
+                            printWindow.close();
+                        }, 500);
+                    };
+
+                    image.onerror = function() {
+                        alert("Image failed to load.");
+                    };
+
+                    image.src = url;
+                })
+                .catch(error => {
+                    console.error("Failed to load SVG:", error);
+                    alert("Failed to load QR image.");
+                });
+        }
+
+
+
+        function printQR() {
+            printSVGImageFromURL('#qrImage');
+        }
+    </script>
+
+
+
+    <script>
+        // ✅ Main Logic to Load Sidebar Data
+        document.addEventListener("DOMContentLoaded", function() {
+            const sidebar = document.querySelector(".modal-right");
+            const overlay = document.querySelector(".overlay");
+            const closeBtn = document.querySelector(".close");
+
+            const childData = JSON.parse(document.getElementById("childJson").textContent);
+
+            const classMap = {
+                one: 0,
+                two: 1,
+                three: 2,
+                four: 3,
+                five: 4,
+                six: 5
+            };
+
+            document.querySelectorAll(".one, .two, .three, .four, .five, .six").forEach(item => {
+                item.addEventListener("click", function() {
+                    sidebar.classList.add("show");
+                    overlay.classList.add("show");
+
+                    const selectedClass = Object.keys(classMap).find(cls => this.classList.contains(
+                        cls));
+                    const index = classMap[selectedClass];
+                    const child = childData[index];
+
+                    if (!child) {
+                        alert("Child not found");
+                        return;
+                    }
+
+                    // Store ID globally
+                    selectedChildId = child.id;
+                    qrAlreadyExists = !!child.qr_url;
+
+                    // Set QR button state
+                    const qrBtn = document.getElementById("qr-btn");
+                    if (qrAlreadyExists) {
+                        qrBtn.innerText = "View QR";
+                        qrBtn.dataset.qrUrl = child.qr_url;
+                    } else {
+                        qrBtn.innerText = "Generate QR";
+                        qrBtn.removeAttribute("data-qr-url");
+                    }
+
+                    // Fill modal fields
+                    document.getElementById("child-name").innerText = child.name;
+                    document.getElementById("child-qty").innerText = child.quantity;
+                    document.getElementById("child-unit-price").innerText = child.unit_price;
+                    document.getElementById("child-total-price").innerText = child.total_price;
+                    document.getElementById("child-date").innerText = child.ordered_date;
+                    document.getElementById("eta").value = child.eta;
+                    document.getElementById("ata").value = child.ata;
+                    document.getElementById("inspection").value = child.inspection;
+                    document.getElementById("pm-remarks").value = child.pm;
+                    document.getElementById("child-item-id").value = child.id;
+                    document.getElementById("child-image").src = child.image ||
+                        "/static/images/no_image.png";
+                });
+            });
+
+            // Close Sidebar
+            closeBtn.addEventListener("click", () => {
+                sidebar.classList.remove("show");
+                overlay.classList.remove("show");
+            });
+
+            overlay.addEventListener("click", () => {
+                sidebar.classList.remove("show");
+                overlay.classList.remove("show");
+            });
+        });
+    </script>
+
+    <script>
+        // ✅ Enable Save button only if form changes
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector("#saveBtn").closest("form");
+            const saveBtn = document.getElementById("saveBtn");
+
+
+            const initialValues = {};
+            Array.from(form.elements).forEach(el => {
+                if (el.name) {
+                    initialValues[el.name] = el.value;
+                }
+            });
+
+            form.addEventListener("input", () => {
+                let changed = false;
+                Array.from(form.elements).forEach(el => {
+                    if (el.name && initialValues[el.name] !== el.value) {
+                        changed = true;
+                    }
+                });
+                saveBtn.disabled = !changed;
+            });
+        });
+    </script>
+
 @endsection
