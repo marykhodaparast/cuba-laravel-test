@@ -24,11 +24,11 @@
                             <h6>Pinned</h6>
                         </div>
                     </li>
-                    <li class="sidebar-main-title">
+                    {{-- <li class="sidebar-main-title">
                         <div>
                             <h6 class="">Wescosa sidebar</h6>
                         </div>
-                    </li>
+                    </li> --}}
 
                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
                             class="sidebar-link sidebar-title link-nav"
